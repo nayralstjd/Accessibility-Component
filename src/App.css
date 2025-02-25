@@ -1,0 +1,454 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 80%;
+  max-width: 1175px; /* Increase the width */
+  height: 700px;
+  margin: auto;
+  padding: 20px;
+  background-color: #2a3b4c; /* Lighter shade of dark blue */
+  border-radius: 10px;
+}
+
+.carousel-card {
+  text-align: left;
+  width: 100%;
+}
+
+.light-blue {
+  color: #45a29e;
+}
+
+.carousel-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.image-container img {
+  width: 500px; /* Increase image size */
+  height: auto;
+  border-radius: 5px;
+}
+
+.arrow {
+  background: none;
+  border: none;
+  color: #66fcf1;
+  font-size: 2.5rem; /* Slightly larger arrows */
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.left {
+  left: 10px;
+}
+
+.right {
+  right: 10px;
+}
+
+/* Ensure the container stretches to full height */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.project-header {
+  margin-bottom: 20px;
+}
+
+.carousel-box {
+  padding-left: 70px;
+}
+
+.left-aligned {
+  max-width: 1175px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.analysis {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1175px;
+  margin-top: -20px;
+  margin-bottom: -200px;
+}
+
+ul {
+  padding-left: 20px;
+  list-style-position: inside;
+  text-align: left;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.highlighted {
+  color: #66fcf1;
+}
+
+.Observations {
+  color: #66fcf1;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 220px;
+}
+
+.view-more-btn {
+  background-color: #45a29e;
+  align-self: last baseline;
+  color: #1f2833;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle drop shadow */
+  margin-top: -20px;
+}
+
+.view-more-btn:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.view-more-btn:active {
+  transform: scale(0.95); /* Button presses down when clicked */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: #2a3b4c;
+  padding: 20px;
+  width: 50%;
+  max-width: 400px;
+  color: #c5c6c7;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  max-width: 1200px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #66fcf1;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.close-btn:hover {
+  color: #ffffff;
+}
+
+.h4 {
+  text-align: left;
+}
+
+.view-more-btn2 {
+  background-color: #45a29e;
+  align-self: last baseline;
+  color: #1f2833;
+  border: none;
+  padding: 12px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle drop shadow */
+  margin-top: -80px;
+}
+
+.view-more-btn2:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.view-more-btn2:active {
+  transform: scale(0.95); /* Button presses down when clicked */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.flip-btn-interactive {
+  background-color: #45a29e;
+  color: #1f2833;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle drop shadow */
+  position: absolute;  /* Make the button position absolute */
+  top: 20px;  /* Set the button 20px from the top */
+  right: 20px;  /* Set the button 20px from the right edge */
+  z-index: 10;  /* Ensure it is above other content */
+}
+
+
+.flip-btn-interactive:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+  transform: translateY(-2px); /* Slight lift effect */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+.view-more-btn2:active {
+  transform: scale(0.95); /* Button presses down when clicked */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Video Container Styling for Keyboard User View */
+.keyboard-video {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover; /* Ensures the video fits nicely */
+  max-height: 400px; /* Adjust according to how large you want the video to be */
+}
+
+/* Flipped content styling */
+.flipped-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 100%;
+}
+
+.keyboard-text-box {
+  font-size: 15px;
+}
+
+/* Video Styling */
+.keyboard-video {
+  width: 90%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+  max-height: 400px;
+  align-items: center;
+}
+
+/* Headings & List */
+.keyboard-text-box h3 {
+  color: #c5c6c7;
+}
+
+.keyboard-text-box h4 {
+  align-items: start;
+}
+
+.keyboard-text-box ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.keyboard-text-box li {
+  margin: 10px 0;
+}
+
+/* Title for the comparison section */
+.comparison-title {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.comparison-table {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #2a3b4c;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #c5c6c7;
+}
+
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #45a29e;
+}
+
+th {
+  background-color: #45a29e;
+  color: #1f2833;
+}
+
+td {
+  background-color: #2a3b4c;
+}
+
+tr:hover {
+  background-color: #45a29e;
+}
+
+td, th {
+  color: #c5c6c7;
+}
+
+.comparison-summary {
+  max-width: 1275px;
+}
+
+.outputobs{
+  color: #66fcf1;
+  align-self: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.Ouput-intro {
+ margin-top: 0px;
+}
+
+.redesign-title {
+  max-width: 1275px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.statemodelinfo1 {
+  max-width: 1275px;
+  margin-top: -15px;
+}
+
+.statemodelinfo2 {
+  max-width: 1275px;
+}
+
+.small-image-left-image {
+  width: 637.5px;
+  height: auto
+}
+
+.small-image-right-image {
+  width: 474.35px;
+  height: auto;
+}
+
+.small-image-right-image2 {
+  width: 521px;
+  height: auto;
+}
+
+.small-image-left-image2 {
+  width: 450px;
+  height: auto;
+  margin-left: 225px;
+}
+
+.small-image-left-image3 {
+  width: 637.5px;
+  height: auto;
+  margin-left: -80px;
+}
+
+.fancy-arrow {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  top: -160px;
+  font-size: 2rem; /* Large arrow */
+  color: #66fcf1; /* Matches your theme */
+  font-weight: bold;
+  margin: 0 15px; /* Spacing between images */
+  display: inline-block; /* Required for animation */
+  animation: bounce 0.8s infinite alternate ease-in-out; /* Smooth motion */
+}
+
+.fancy-arrow2 {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  top: -180px;
+  font-size: 2rem; /* Large arrow */
+  color: #66fcf1; /* Matches your theme */
+  font-weight: bold;
+  margin: 0 15px; /* Spacing between images */
+  display: inline-block; /* Required for animation */
+  animation: bounce 0.8s infinite alternate ease-in-out; /* Smooth motion */
+}
+
+@keyframes bounce {
+  0% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(8px); opacity: 0.7; }
+}
+
+.keyboard-and-textbox {
+  display: flex;
+  align-items: center; /* Align vertically in the center */
+  gap: 100px; /* Adds spacing between the image and the text box */
+  margin-left: 120px;
+}
+
+.text-box {
+  width: 500px;
+  height: auto;
+}
+
+.red1 {
+  max-width: 1274px;
+  align-self: center;
+  margin-left: 20px;
+}
+
+.redesigninfo {
+  margin-top: -5px;
+}
