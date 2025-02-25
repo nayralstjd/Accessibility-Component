@@ -390,6 +390,16 @@ function OutputTable() {
     </section>
   );
 }
+function VideoPlayer() {
+  return (
+    <div className="video-container">
+      <video controls width="100%">
+        <source src="/clip222.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  );
+}
 function App() {
   return (
     <div className="app-container" style={{ backgroundColor: "#1f2833", color: "#c5c6c7" }}>
@@ -527,7 +537,41 @@ function App() {
   </ul>
   <RedesignedLayout></RedesignedLayout>
   <h3 style={{ color: "#66fcf1" }}>Redesign</h3>
-  <p className="redesigninfo">So let's visualize what this would look like!</p>
+  <p className="redesigninfo">So let's visualize what this would look like! Drag the progress bar to jump to any part instantly!</p>
+<VideoPlayer></VideoPlayer>
+<h2 style={{color: "#66fcf1" }}>Redesigned Spotify's New Look</h2>
+{/* New Spotify Video as Always Playing */}
+<div className="video-container">
+        <video
+          src="/newspotify.mp4"
+          autoPlay
+          loop
+          muted
+          className="spotify-video"
+          style={{
+            width: "100%", // Adjust size as needed
+            height: "auto", // Keep aspect ratio
+            objectFit: "cover", // Ensures the video covers the container area
+          }}
+        />
+      </div>
+      <h2 style={{ color: "#66fcf1" }}>Reflection</h2>
+      <div className="reflection-section">
+        <ul>
+  <p>
+    The components I observed, particularly <strong>Spotify’s</strong>, were effective in terms of <strong>usability</strong>, with <strong>dynamic hover-triggered shortcuts</strong> offering clear <strong>visual feedback</strong> when interacting with the search bar. While <strong>intuitive for mouse users</strong>, this posed challenges for <strong>keyboard users</strong> and individuals with <strong>visual impairments</strong>, highlighting a key <strong>accessibility mismatch</strong>: the <strong>discoverability of shortcuts</strong>, which relied on hovering and was not as apparent to those who don’t use a mouse.
+  </p>
+  <p>
+    To address this mismatch, I made the <strong>shortcuts visible by default</strong>, improving both <strong>learnability</strong> and <strong>accessibility</strong>. This change reduces reliance on hovering and makes the interface more inclusive for users with <strong>low vision</strong> or those navigating without a mouse. By ensuring the shortcuts are always visible, I better aligned the design’s functionality with the needs of all users, ensuring no one missed key features.
+  </p>
+  <p><strong>Example 1 - Positive Accessibility Impact:</strong> Making the shortcuts visible aids <strong>keyboard users</strong>, reducing <strong>cognitive load</strong> and benefiting <strong>motor-impaired individuals</strong> who rely on the keyboard.</p>
+  <p><strong>Example 2 - Negative Accessibility Impact:</strong> While visibility was improved, <strong>color inversion feedback</strong> might still pose challenges for users with <strong>color blindness</strong> if <strong>contrast</strong> isn’t sufficient.</p>
+  <p>
+    In the process of creating components, <strong>mouse users</strong> are most commonly prioritized because of their ability to interact with dynamic content intuitively. However, this often leaves <strong>keyboard</strong> and <strong>screen reader users</strong> underserved, leading to them struggling in navigating or discovering features that are optimized for mouse interaction. My <strong>redesign</strong> aimed to balance this by ensuring that the component is inclusive for both keyboard and screen reader users, improving the overall experience for everyone.
+  </p>
+  </ul>
+</div>
+
     </div>
   );
 }

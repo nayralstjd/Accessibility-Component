@@ -452,3 +452,13 @@ td, th {
 .redesigninfo {
   margin-top: -5px;
 }
+
+.video-container{
+  max-width: 1275px;
+  margin-bottom: 20px;
+}
+
+.reflection-section {
+  max-width: 1275px;
+  margin-top: -10px;
+}
