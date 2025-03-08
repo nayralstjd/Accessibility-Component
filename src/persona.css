@@ -153,3 +153,117 @@
     max-width: 800px; /* Optional: Sets a max width for the image */
     height: auto; /* Keeps the aspect ratio of the image */
 }
+
+.image-hover-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers image and text */
+    margin-top: 20px;
+    position: relative; /* Required for overlay effects */
+    max-width: 600px;
+}
+
+.hover-image {
+    width: 100%; /* Adjust size */
+    max-width: 500px;
+    height: auto;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.hover-image:hover {
+    content: url("/public/annotate.png"); /* Changes image on hover */
+}
+
+.hover-indicator {
+    font-size: 1rem;
+    color: #66fcf1;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+
+.descrip {
+    color: #c5c6c7;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1175px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.descrip2 {
+    color: #c5c6c7;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1175px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.descrip-list {
+    color: #c5c6c7;
+}
+
+strong {
+    color: #66fcf1;
+}
+
+/* Flexbox container for side-by-side layout */
+.comparison-container {
+    display: flex;
+    justify-content: space-between; /* Ensures equal spacing */
+    align-items: flex-start; /* Aligns the lists at the top */
+    max-width: 900px;
+    margin: 20px auto;
+    gap: 40px; /* Adds space between the two lists */
+}
+
+/* Individual boxes for each list */
+.comparison-box {
+    flex: 1;
+    background-color: #2c3949; /* Optional: Background color for contrast */
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: -20px;
+}
+
+/* Headings for each section */
+.subheading {
+    color: #45a29e;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Styles for both lists */
+.similarities-list, .differences-list {
+    color: #c5c6c7;
+    text-align: left;
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.similarities-list li, .differences-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Remove bold effect */
+strong {
+    color: 45a29e;
+}
+
+.reflection-text {
+    color: #c5c6c7;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: left;
+    max-width: 1175px;
+    margin: 20px auto;
+    background-color: #1f2833;
+    padding: 15px;
+    border-radius: 10px;
+}
