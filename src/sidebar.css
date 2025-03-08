@@ -109,6 +109,18 @@ body {
   z-index: 1101; /* Make sure the close button is above the content */
 }
 
+.close-btn2 {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #c5c6c7;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 34px;
+  z-index: 1101; /* Make sure the close button is above the content */
+}
+
 /* Media query for smaller screens */
 @media (max-width: 768px) {
   .sidebar {

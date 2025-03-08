@@ -1,28 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import { Link } from "react-router-dom"; // to use Link for navigation
-import "./sidebar.css";
-
-const Sidebar = ({ isOpen, toggleSidebar }) => {
-  return (
-    <div className={`sidebar ${isOpen ? "open" : ""}`}>
-      {isOpen && (
-        <button className="close-btn" onClick={toggleSidebar}>
-          &#10005;
-        </button>
-      )}
-      <h2>Projects</h2>
-      <ul>
-        <li>
-          <Link to="/accessibility-redesign">Project 1: Accessibility Redesign</Link>
-        </li>
-        <li>
-          <Link to="/personas-storyboarding">Project 2: Personas & Storyboarding</Link>
-        </li>
-      </ul>
-    </div>
-  );
-};
+import { Link } from "react-router-dom";
 
 const data = [
   {
@@ -424,17 +402,48 @@ function VideoPlayer() {
   );
 }
 function App() {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  // State to handle 22 visibility
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
+  // Toggle sidebar visibility
   const toggleSidebar = () => {
-    setSidebarOpen(!isSidebarOpen); // Toggle sidebar open/close state
+    setIsSidebarOpen(!isSidebarOpen);
   };
+
   return (
     <div className="app-container" style={{ backgroundColor: "#1f2833", color: "#c5c6c7" }}>
-      
       <header className="project-header">
         <h1 style={{ color: "#66fcf1" }}>Accessible Components & Redesign</h1>
+        
+        {/* Three-line hamburger icon for sidebar */}
+        <div className="hamburger" onClick={toggleSidebar}>
+          &#9776;
+        </div>
       </header>
+      
+      {/* Sidebar */}
+      <div className={`sidebar ${isSidebarOpen ? "open" : ""}`}>
+      <button className="close-btn2" onClick={toggleSidebar}>
+    &#10005;
+  </button>
+        <h2>Projects</h2>
+        <ul>
+          {/* Homepage */}
+          <li>
+            <Link to="/">Homepage</Link> {/* Link to itself */}
+          </li>
+          {/* Link for Project 1 */}
+          <li>
+            <Link to="/accessibility-redesign">Project 1: Accessibility Redesign</Link> {/* Link to itself */}
+          </li>
+          
+          {/* Link for Project 2 */}
+          <li>
+            <Link to="/personas-storyboarding">Project 2: Personas & Storyboarding</Link> {/* Link to personasstoryboarding.js */}
+          </li>
+        </ul>
+      </div>
+
       <section className="project-intro">
         <p className="left-aligned">
           This project focuses on improving accessibility in search bar design by analyzing how users interact with search bars across different input methods and devices.
@@ -482,12 +491,6 @@ function App() {
               <td>• Hovering over search bar enlarges it<br />• Adds blue border and highlights search icons (Mouse)</td>
               <td>• Hovering over the search bar indicates where to click (Mouse)</td>
             </tr>
-            {/* <tr>
-              <td>Tabbing</td>
-              <td>- Tab sequence: Home → Search → Clear Recent Searches → Browse (Intuitive)</td>
-              <td>- Tabbing goes from search bar to suggestions and controls (Keyboard-only)</td>
-              <td>- Tabbing works if the app is large enough (Keyboard-only)</td>
-            </tr> */}
             <tr>
               <td>Keyboard Shortcuts</td>
               <td>• Command + K: Opens a new search bar</td>
@@ -527,50 +530,56 @@ function App() {
           </tbody>
         </table>
       </section>
-{/* Comparison Summary */}
-<section className="comparison-summary">
+
+      {/* Comparison Summary */}
+      <section className="comparison-summary">
         <h3 style={{ color: "#66fcf1" }}>Takeaways!</h3>
         <ul>
-        <p>
-        One aspect I liked about YouTube was the structured UI—when clicking the search bar, the newly appearing icon matches the one in the search dropdown, reinforcing usability. Spotify, in contrast, makes searching feel more interactive and dynamic, though its Command + K function's new search bar seems redundant and out of place. The Photos App, while uninspired, aligns with its primary use case—most users will browse by scrolling rather than typing in a search bar, making its minimal search functionality more acceptable.
-        </p>
+          <p>
+            One aspect I liked about YouTube was the structured UI—when clicking the search bar, the newly appearing icon matches the one in the search dropdown, reinforcing usability. Spotify, in contrast, makes searching feel more interactive and dynamic, though its Command + K function's new search bar seems redundant and out of place. The Photos App, while uninspired, aligns with its primary use case—most users will browse by scrolling rather than typing in a search bar, making its minimal search functionality more acceptable.
+          </p>
         </ul>
         <ul>
           <p>
-          Accessibility wise, YouTube offers the most structured and intuitive search experience, with clear visual feedback, an expanding search bar, and the / shortcut for quick access, though its autocomplete navigation is limited. Spotify provides a dynamic and engaging interaction with hover effects and shortcut appearances, but its Command + K function feels redundant. The Photos App, while the least intuitive, uniquely allows image drag-and-drop into the search bar, making it useful for its specific use case despite lacking strong visual cues.
+            Accessibility wise, YouTube offers the most structured and intuitive search experience, with clear visual feedback, an expanding search bar, and the / shortcut for quick access, though its autocomplete navigation is limited. Spotify provides a dynamic and engaging interaction with hover effects and shortcut appearances, but its Command + K function feels redundant. The Photos App, while the least intuitive, uniquely allows image drag-and-drop into the search bar, making it useful for its specific use case despite lacking strong visual cues.
           </p>
         </ul>
       </section>
+
       <p className="outputobs">
-          Output Observations Across Platforms (Mouse Users and Keyboard/Shortcut Users)
-        </p>
+        Output Observations Across Platforms (Mouse Users and Keyboard/Shortcut Users)
+      </p>
       <p className="Ouput-intro">
         Now, that we looked at what input is available, let's take a look at the outputs that it generates.
       </p>
       <OutputTable />
+      
       <section className="comparison-summary">
-  <h3 style={{ color: "#66fcf1" }}>Takeaways!</h3>
-  <ul>
-  <p>
-    In terms of accessibility, YouTube excels with a well-structured interface, offering clear visual feedback and intuitive keyboard navigation. The expanding search bar and the / shortcut make it easy to interact, although the autocomplete feature could be improved for better keyboard-only users. Spotify, while offering a dynamic experience, can be overwhelming with its multiple shortcuts. The Photos app, though simple, lacks strong visual cues and accessibility features. However, its drag-and-drop image search functionality is a unique benefit for users looking for a more specific use case.
-  </p>
-  </ul>
-</section>
-<section className="redesign-title">
+        <h3 style={{ color: "#66fcf1" }}>Takeaways!</h3>
+        <ul>
+          <p>
+            In terms of accessibility, YouTube excels with a well-structured interface, offering clear visual feedback and intuitive keyboard navigation. The expanding search bar and the / shortcut make it easy to interact, although the autocomplete feature could be improved for better keyboard-only users. Spotify, while offering a dynamic experience, can be overwhelming with its multiple shortcuts. The Photos app, though simple, lacks strong visual cues and accessibility features. However, its drag-and-drop image search functionality is a unique benefit for users looking for a more specific use case.
+          </p>
+        </ul>
+      </section>
+
+      <section className="redesign-title">
         <p style={{ color: "#66fcf1" }}>State Models & Component Redesign</p>
       </section>
       <ul>
         <p className="statemodelinfo1">
-    Building on the insights from the input and output analysis, we now turn our focus to redesigning Spotify’s search bar component. Before diving into the redesign, we’ll first visualize how the component behaves in different states for both <strong>mouse</strong> and <strong>keyboard</strong> users. This way, we can understand the nuances of the interactions and identify areas to improve accessibility and user flow.
-  </p>
-  </ul>
-  <RedesignedLayout></RedesignedLayout>
-  <h3 style={{ color: "#66fcf1" }}>Redesign</h3>
-  <p className="redesigninfo">So let's visualize what this would look like! Drag the progress bar to jump to any part instantly!</p>
-<VideoPlayer></VideoPlayer>
-<h2 style={{color: "#66fcf1" }}>Redesigned Spotify's New Look</h2>
-{/* New Spotify Video as Always Playing */}
-<div className="video-container">
+          Building on the insights from the input and output analysis, we now turn our focus to redesigning Spotify’s search bar component. Before diving into the redesign, we’ll first visualize how the component behaves in different states for both <strong>mouse</strong> and <strong>keyboard</strong> users. This way, we can understand the nuances of the interactions and identify areas to improve accessibility and user flow.
+        </p>
+      </ul>
+      <RedesignedLayout />
+      <h3 style={{ color: "#66fcf1" }}>Redesign</h3>
+      <p className="redesigninfo">So let's visualize what this would look like! Drag the progress bar to jump to any part instantly!</p>
+      <VideoPlayer />
+      
+      <h2 style={{ color: "#66fcf1" }}>Redesigned Spotify's New Look</h2>
+
+      {/* New Spotify Video as Always Playing */}
+      <div className="video-container">
         <video
           src="/newspotify.mp4"
           autoPlay
@@ -584,27 +593,25 @@ function App() {
           }}
         />
       </div>
+      
       <h2 style={{ color: "#66fcf1" }}>Reflection</h2>
       <div className="reflection-section">
         <ul>
-  <p>
-    The components I observed, particularly <strong>Spotify’s</strong>, were effective in terms of <strong>usability</strong>, with <strong>dynamic hover-triggered shortcuts</strong> offering clear <strong>visual feedback</strong> when interacting with the search bar. While <strong>intuitive for mouse users</strong>, this posed challenges for <strong>keyboard users</strong> and individuals with <strong>visual impairments</strong>, highlighting a key <strong>accessibility mismatch</strong>: the <strong>discoverability of shortcuts</strong>, which relied on hovering and was not as apparent to those who don’t use a mouse.
-  </p>
-  <p>
-    To address this mismatch, I made the <strong>shortcuts visible by default</strong>, improving both <strong>learnability</strong> and <strong>accessibility</strong>. This change reduces reliance on hovering and makes the interface more inclusive for users with <strong>low vision</strong> or those navigating without a mouse. By ensuring the shortcuts are always visible, I better aligned the design’s functionality with the needs of all users, ensuring no one missed key features.
-  </p>
-  <p><strong>Example 1 - Positive Accessibility Impact:</strong> Making the shortcuts visible aids <strong>keyboard users</strong>, reducing <strong>cognitive load</strong> and benefiting <strong>motor-impaired individuals</strong> who rely on the keyboard.</p>
-  <p><strong>Example 2 - Negative Accessibility Impact:</strong> While visibility was improved, <strong>color inversion feedback</strong> might still pose challenges for users with <strong>color blindness</strong> if <strong>contrast</strong> isn’t sufficient.</p>
-  <p>
-    In the process of creating components, <strong>mouse users</strong> are most commonly prioritized because of their ability to interact with dynamic content intuitively. However, this often leaves <strong>keyboard</strong> and <strong>screen reader users</strong> underserved, leading to them struggling in navigating or discovering features that are optimized for mouse interaction. My <strong>redesign</strong> aimed to balance this by ensuring that the component is inclusive for both keyboard and screen reader users, improving the overall experience for everyone.
-  </p>
-  </ul>
-</div>
-
+          <p>
+            The components I observed, particularly <strong>Spotify’s</strong>, were effective in terms of <strong>usability</strong>, with <strong>dynamic hover-triggered shortcuts</strong> offering clear <strong>visual feedback</strong> when interacting with the search bar. While <strong>intuitive for mouse users</strong>, this posed challenges for <strong>keyboard users</strong> and individuals with <strong>visual impairments</strong>, highlighting a key <strong>accessibility mismatch</strong>: the <strong>discoverability of shortcuts</strong>, which relied on hovering and was not as apparent to those who don’t use a mouse.
+          </p>
+          <p>
+            To address this mismatch, I made the <strong>shortcuts visible by default</strong>, improving both <strong>learnability</strong> and <strong>accessibility</strong>. This change reduces reliance on hovering and makes the interface more inclusive for users with <strong>low vision</strong> or those navigating without a mouse. By ensuring the shortcuts are always visible, I better aligned the design’s functionality with the needs of all users, ensuring no one missed key features.
+          </p>
+          <p><strong>Example 1 - Positive Accessibility Impact:</strong> Making the shortcuts visible aids <strong>keyboard users</strong>, reducing <strong>cognitive load</strong> and benefiting <strong>motor-impaired individuals</strong> who rely on the keyboard.</p>
+          <p><strong>Example 2 - Negative Accessibility Impact:</strong> While visibility was improved, <strong>color inversion feedback</strong> might still pose challenges for users with <strong>color blindness</strong> if <strong>contrast</strong> isn’t sufficient.</p>
+          <p>
+            In the process of creating components, <strong>mouse users</strong> are most commonly prioritized because of their ability to interact with dynamic content intuitively. However, this often leaves <strong>keyboard</strong> and <strong>screen reader users</strong> underserved, leading to them struggling in navigating or discovering features that are optimized for mouse interaction. My <strong>redesign</strong> aimed to balance this by ensuring that the component is inclusive for both keyboard and screen reader users, improving the overall experience for everyone.
+          </p>
+        </ul>
+      </div>
     </div>
   );
 }
-
-
 
 export default App;

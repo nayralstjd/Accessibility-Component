@@ -1,0 +1,155 @@
+.project-header {
+    color: #66fcf1;
+}
+
+.descr {
+    color: #c5c6c7;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1175px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.descr2 {
+    color: #c5c6c7;
+}
+
+.descr3 {
+    color: #c5c6c7;
+    display: flex;
+    flex-direction: column;
+    margin-left: -700px;
+    margin-top: -10px;
+}
+
+
+.image-container {
+    margin-top: -4px;
+    display: flex;
+    justify-content: center;
+}
+
+.vending-machine-img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+}
+
+.section-title1 {
+    color: #66fcf1;
+    margin-top: 20px;
+    font-size: 1.6rem;
+}
+
+.section-title2 {
+    color: #66fcf1;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.question-explanation {
+    color: #c5c6c7;
+    margin-top: 20px;
+    font-size: 1rem;
+}
+
+.question-explanation-list {
+    color: #c5c6c7;
+    text-align: left;
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.question-explanation-list li {
+    margin-bottom: 10px;
+}
+
+.interdescr {
+    color: #c5c6c7;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1175px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.interdescr2 {
+    color: #c5c6c7;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    max-width: 1175px;
+    align-items: flex-start;
+    text-align: left;
+}
+
+
+.interview-questions {
+    color: #c5c6c7;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
+
+.observations {
+    color: #c5c6c7;
+    margin-top: 0px;
+}
+
+.section-title {
+    color: #66fcf1;
+    margin-top: 20px;
+    font-size: 1.6rem;
+}
+
+.personas-container {
+    display: flex; /* Aligns the personas side by side */
+    justify-content: space-between; /* Optional: Adds space between the images */
+    align-items: center; /* Centers the images vertically */
+    margin-top: -15px; /* Adds space above the personas section */
+}
+
+.persona {
+    text-align: center; /* Centers text under the images */
+    flex: 1; /* Ensures both personas take equal width */
+    padding: 10px; /* Adds space around each persona */
+}
+
+.image-container {
+    margin-top: 10px;
+}
+
+.persona img {
+    width: 120%; /* Makes sure the image fills the container */
+    max-width: 600px; /* Optional: Sets a max width for the images */
+    height: auto; /* Ensures images maintain their aspect ratio */
+}
+
+.persona2 img {
+    width: 120%; /* Makes sure the image fills the container */
+    max-width: 611px; /* Optional: Sets a max width for the images */
+    height: auto; /* Ensures images maintain their aspect ratio */
+}
+
+.persona1 {
+    color: #45a29e; /* Custom color for persona 1 title */
+}
+
+.persona2 {
+    color: #45a29e; /* Custom color for persona 2 title */
+}
+.image-container2 {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically (if the container has a height) */
+    margin-top: 20px; /* Optional: Adds some space above the image */
+}
+
+.image-container2 img {
+    width: 120%; /* Resize the image to 80% of its container width */
+    max-width: 800px; /* Optional: Sets a max width for the image */
+    height: auto; /* Keeps the aspect ratio of the image */
+}
