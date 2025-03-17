@@ -441,6 +441,11 @@ function App() {
           <li>
             <Link to="/personas-storyboarding">Project 2: Personas & Storyboarding</Link> {/* Link to personasstoryboarding.js */}
           </li>
+
+          <li>
+            <Link to="/websiteredesign">Project 3: Website Redesign</Link> {/* Link to personasstoryboarding.js */}
+          </li>
+
         </ul>
       </div>
 

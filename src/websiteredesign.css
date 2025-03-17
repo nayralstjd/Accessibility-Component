@@ -1,0 +1,118 @@
+/* General Page Styling */
+.app-container {
+    background-color: #1f2833;
+    color: #c5c6c7;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Styling */
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #66fcf1;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -350px;
+    width: 250px;
+    height: 100%;
+    background-color: #0b0c10;
+    padding-top: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 4px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    color: #66fcf1;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #c5c6c7;
+    font-size: 1rem;
+    display: block;
+    transition: 0.2s ease-in-out;
+}
+
+.sidebar ul li a:hover {
+    color: #66fcf1;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #66fcf1;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+}
+
+/* Close Button */
+.close-btn2 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #c5c6c7;
+    cursor: pointer;
+}
+
+.close-btn2:hover {
+    color: #66fcf1;
+}
+
+/* Page Content */
+.new-page-container {
+    margin-left: 50px;
+    padding: 20px;
+}
+
+.new-page-container p {
+    font-size: 1.2rem;
+    color: #c5c6c7;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .hamburger {
+        font-size: 1.5rem;
+    }
+}

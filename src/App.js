@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import AccessibilityRedesign from "./accessibility";
 import PersonasStoryboarding from "./PersonasStoryboarding";
+import Redesign from "./websiteredesign";
 import "./sidebar.css";
 
 // Sidebar component
@@ -20,6 +21,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
         </li>
         <li>
           <Link to="/personas-storyboarding">Project 2: Personas & Storyboarding</Link>
+        </li>
+        <li>
+          <Link to="/websiteredesign">Project 3: Website Redesign</Link>
         </li>
       </ul>
     </div>
@@ -57,6 +61,7 @@ const AppRouter = () => {
         />
         <Route path="/accessibility-redesign" element={<AccessibilityRedesign />} />
         <Route path="/personas-storyboarding" element={<PersonasStoryboarding />} />
+        <Route path="/websiteredesign" element={<Redesign />} />
       </Routes>
     </Router>
   );

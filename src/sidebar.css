@@ -53,7 +53,7 @@ body {
   color: #c5c6c7;
   padding: 20px;
   position: fixed;
-  left: -250px; /* Initially hidden off-screen */
+  left: -300px; /* Initially hidden off-screen */
   top: 0;
   bottom: 0;
   transition: left 0.3s ease; /* Slide in animation */
