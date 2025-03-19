@@ -93,17 +93,46 @@
 .new-page-container {
     margin-left: 50px;
     padding: 20px;
+    max-width: 1175px;
+    margin-top: -60px;
 }
 
 .new-page-container p {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: #c5c6c7;
-    max-width: 800px;
+    max-width: 1175px;
+    line-height: 1.6;
+}
+.website-descr {
+    margin-left: 50px;
+    padding: 20px;
+    max-width: 1175px;
+    margin-top: -60px;
+}
+
+.website-descr p {
+    font-size: 1.0rem;
+    color: #c5c6c7;
+    max-width: 1175px;
+    line-height: 1.6;
+}
+
+.website-descr2 {
+    margin-left: 50px;
+    padding: 20px;
+    max-width: 1175px;
+    margin-top: -20px;
+}
+
+.website-descr2 p {
+    font-size: 1.0rem;
+    color: #c5c6c7;
+    max-width: 1175px;
     line-height: 1.6;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1175px) {
     .sidebar {
         width: 200px;
     }
@@ -115,4 +144,245 @@
     .hamburger {
         font-size: 1.5rem;
     }
+}
+
+.website-descr2 a {
+    color: #66fcf1; /* Change this to your preferred link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.website-descr2 a:visited {
+    color: #45a29e; /* Change this to the color when the link is visited */
+}
+
+/* Carousel Styling */
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #2b3948;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1300px; /* Increased width */
+    height: 350px; /* Increased height */
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    position: relative; /* Needed for absolute positioning of arrows */
+}
+
+/* Left & Right Arrow Buttons */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    color: #66fcf1;
+    font-size: 2.5rem; /* Made arrows slightly bigger */
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.carousel-btn:hover {
+    color: #45a29e;
+}
+
+/* Positioning the Arrows */
+.carousel-btn:first-of-type {
+    left: 20px; /* Increased spacing from left */
+}
+
+.carousel-btn:last-of-type {
+    right: 20px; /* Increased spacing from right */
+}
+
+/* Carousel Content */
+.carousel-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers horizontally */
+    justify-content: center; /* Centers vertically */
+    width: 850px;
+    max-width: 900px; /* Increased width of content */
+    height: 100%; /* Ensures content fills the fixed height */
+    text-align: center;
+}
+
+/* Centered Title Inside Carousel */
+.carousel h2 {
+    color: #66fcf1;
+    font-size: 1.8rem; /* Increased font size */
+    margin-bottom: 20px; /* More spacing below */
+    text-align: center;
+}
+
+/* List Styling Inside Carousel */
+.carousel ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    max-width: 85%;
+    font-size: 1.0rem;
+}
+
+/* Ensuring List Items Stay Readable */
+.carousel ul li {
+    font-size: 1.0rem; /* Increased text size */
+    line-height: 1.8; /* More spacing between lines */
+    margin-bottom: 12px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel {
+        height: 550px; /* Adjust height for smaller screens */
+        max-width: 95%;
+    }
+
+    .carousel-content {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    .carousel-btn {
+        font-size: 2rem;
+    }
+
+    .carousel-btn:first-of-type {
+        left: 10px;
+    }
+
+    .carousel-btn:last-of-type {
+        right: 10px;
+    }
+}
+
+.recommendations h2 {
+    font-size: 1.8rem;
+    color: #66fcf1;
+}
+
+/* Visual Redesign Section */
+.visual-redesign {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1175px;
+}
+
+.visual-redesign h2 {
+    color: #66fcf1;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.visual-redesign p {
+    color: #c5c6c7;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.visual-guide-img {
+    width: 100%;
+    max-width: 900px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Device Preview Section */
+.device-preview {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1175px;
+}
+
+.device-preview h2 {
+    color: #66fcf1;
+    font-size: 1.8rem;
+    margin-top: -60px;
+}
+
+/* Screen Container */
+.screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0c10;
+    width: 100%;
+    max-width: 900px;
+    height: 500px;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Screen Image */
+.device-image {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Device Preview Section */
+.device-preview {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 1175px;
+}
+
+.device-preview h2 {
+    color: #66fcf1;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Screen Container (fixed size) */
+.screen-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b0c10;
+    width: 900px; /* Fixed width for the screen container */
+    height: 700px; /* Fixed height for the screen container */
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Ensures that the images are cropped if they exceed the container */
+}
+
+/* Screen Image */
+.device-image {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    max-height: 100%; /* Ensures the image does not exceed the container's height */
+    object-fit: contain; /* Maintains aspect ratio and ensures the image is fully contained within the box */
+    border-radius: 10px;
+}
+
+/* Device Buttons */
+.device-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.device-buttons button {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.device-buttons button:hover {
+    background-color: #45a29e;
+}
+
+.mockdescr {
+    max-width: 1175px;
+    margin-top: -20px;
 }

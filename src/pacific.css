@@ -1,0 +1,117 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav input[type="text"] {
+    padding: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* Main container styling */
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Logo styling */
+.logo {
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+/* X-ray image styling */
+.xray-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Order methods section styling */
+.order-methods {
+    margin-bottom: 20px;
+}
+
+.order-methods h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.order-methods ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.order-methods ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* Payment methods, warranties, and cancellations section styling */
+.payment-methods, .warranties, .cancellations {
+    margin-bottom: 20px;
+}
+
+.payment-methods h3, .warranties h3, .cancellations h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.payment-methods p, .warranties p, .cancellations p {
+    font-size: 16px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
