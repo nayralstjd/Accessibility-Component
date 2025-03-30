@@ -107,7 +107,7 @@
     margin-left: 50px;
     padding: 20px;
     max-width: 1175px;
-    margin-top: -60px;
+    margin-top: -50px;
 }
 
 .website-descr p {
@@ -386,3 +386,23 @@
     max-width: 1175px;
     margin-top: -20px;
 }
+
+.website-descr20 {
+    margin-top: -15px;
+}
+
+.teal-link {
+    margin-top: 0px;
+    color: #66fcf1; /* Light teal (default) */
+    text-decoration: none; /* No underline by default */
+    transition: color 0.2s ease; /* Smooth color transition */
+  }
+  
+  .teal-link:hover {
+    color: #45a29e; /* Darker teal on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .teal-link:active {
+    color: #c5c6c7; /* Dark navy flash on click */
+  }

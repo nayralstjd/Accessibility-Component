@@ -166,13 +166,18 @@ function NewPage() {
                 </div>
             </div>
             <p className="mockdescr">While I made significant changes to the overall design, I want you to focus on how the layout adapts as the screen size decreases. As the device gets smaller, font sizes shrink, and elements like the top menu bar condense into icons. Additionally, the information hierarchy evolves; on a laptop, elements are displayed side by side, but as the screen width narrows, the layout shifts to a more vertical structure, with content stacking on top of one another.</p>
-            <div className="website-descr">
-                <p>The website we'll look at today is:</p>
-                {/* Hyperlink to open pacific.html in a new tab */}
-                <a href="/pacific.html" target="_blank" rel="noopener noreferrer">
-                    Pacific Northwest X-Ray Inc.
-                </a>
-            </div>
+            <div className="website-descr20">
+            <p>Below is the website form of the above (Play with screen size to see website responsiveness):</p>
+            {/* Hyperlink with hover and click effects */}
+            <a 
+                href="/pacific.html" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="teal-link"
+            >
+                Pacific Northwest X-Ray Inc.
+            </a>
+        </div>
         </div>
     );
 }

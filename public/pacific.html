@@ -6,250 +6,284 @@
     <title>Pacific Northwest X-Ray Inc.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
+        /* General Styles */
+        html {
+            height: auto;
+            width: auto;
+        }
         body {
             font-family: Arial Rounded MT Bold, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
         }
+
         header {
             background-color: #333;
             color: #fff;
             padding: 10px 0;
             text-align: center;
         }
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background-color: #fff; /* White background */
+            background-color: #fff;
             padding: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border-bottom: 2px solid #000; /* Black stroke */
+            border-bottom: 2px solid #000;
         }
+
         .logo-container {
-            margin-left: 50px;
+            margin-left: 20px;
             display: flex;
             align-items: center;
         }
+
         .logo {
             max-width: 100px;
             margin-right: 10px;
         }
+
         .company-name {
-            font-size: 18px;
+            font-size: calc(12px + 0.5vw);
             font-weight: bold;
-            color: #1f2833; /* Dark gray text */
+            color: #1f2833;
         }
+
         .nav-links {
             display: flex;
             align-items: center;
             flex-grow: 1;
-            justify-content: space-around; /* Spread links evenly */
+            justify-content: space-around;
         }
+
         .nav-links a {
-            color: #1f2833; /* Dark gray text */
+            color: #1f2833;
             text-decoration: none;
-            font-size: 20px; /* Larger font size */
+            font-size: calc(14px + 0.5vw);
             margin: 0 10px;
             display: flex;
             align-items: center;
-            padding: 8px 12px; /* Add padding for better click area */
-            border-radius: 5px; /* Rounded corners */
-            transition: all 0.3s ease; /* Smooth transition for hover and click effects */
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
         }
+
         .nav-links a i {
-            margin-left: 5px; /* Space between text and icon */
-            font-size: 14px; /* Adjust icon size */
+            margin-left: 5px;
+            font-size: calc(10px + 0.3vw);
         }
-        /* Hover Effect */
+
         .nav-links a:hover {
-            outline: 2px solid #ccc; /* Gray outline on hover */
+            outline: 2px solid #ccc;
         }
-        /* Click Effect */
+
         .nav-links a:active {
-            background-color: #1f2833; /* Dark gray background on click */
-            color: #fff; /* White text on click */
+            background-color: #1f2833;
+            color: #fff;
         }
+
         .nav-links a:active span {
-            text-decoration: underline; /* Underline only the text (not the arrow) */
+            text-decoration: underline;
         }
+
         .search-bar {
-            padding: 10px 15px; /* Increased padding */
+            padding: calc(6px + 0.3vw) calc(8px + 0.4vw);
             margin-left: 20px;
-            width: 300px; /* Increased width */
-            border: 2px solid #ccc; /* Light gray border */
-            border-radius: 25px; /* Rounded corners */
-            font-size: 16px; /* Larger font size */
-            outline: none; /* Remove default outline */
-            transition: all 0.3s ease; /* Smooth transition for hover effect */
+            width: 300px;
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: calc(12px + 0.3vw);
+            outline: none;
+            transition: all 0.3s ease;
+            max-width: 300px;
         }
-        /* Search Bar Hover Effect */
+
         .search-bar:hover {
-            box-shadow: 0 0 15px rgba(161, 184, 229, 0.8); /* Drop shadow with color #A1B8E5 */
+            box-shadow: 0 0 15px rgba(161, 184, 229, 0.8);
         }
+
         .search-bar:focus {
-            border-color: #1f2833; /* Dark gray border on focus */
-            box-shadow: 0 0 15px rgba(161, 184, 229, 0.8); /* Drop shadow on focus */
+            border-color: #1f2833;
+            box-shadow: 0 0 15px rgba(161, 184, 229, 0.8);
         }
+
         .container {
-            padding: 0; /* Remove padding to ensure the image fills the width */
+            padding: 0;
             text-align: center;
         }
+
         .image-container {
             position: relative;
             display: block;
-            width: 100%; /* Ensure the container takes full width */
-            margin: 0; /* Remove any default margin */
+            width: 100%;
+            margin: 0;
         }
+
         .hero-title {
             font-family: Arial Rounded MT Bold;
             position: absolute;
-            bottom: 150px; /* Adjust this as needed */
+            bottom: 150px;
             left: 50px;
             color: white;
-            font-size: 64px;
+            font-size: calc(24px + 3vw);
             font-weight: normal;
-            text-align: left; /* Align text to the left */
+            text-align: left;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.1; /* Adjust line spacing for better readability */
+            line-height: 1.1;
         }
 
         .xray-image {
-            width: 100%; /* Make the image fill the width of the screen */
-            height: 600px; /* Set a fixed height (adjust this value as needed) */
-            object-fit: cover; /* Ensure the image covers the area without distortion */
-            display: block; /* Ensure the image behaves as a block element */
-            filter: brightness(0.4); /* Lower the exposure by reducing brightness */
+            width: 100%;
+            height: 600px;
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.4);
         }
+
         .image-text {
             position: absolute;
-            bottom: 100px; /* Adjusted to make space for the button */
+            bottom: 100px;
             left: 50px;
             color: white;
-            font-size: 32px;
+            font-size: calc(14px + 1.5vw);
             font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-weight: normal;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
+
         .contact-button {
             position: absolute;
-            bottom: 30px; /* Positioned below the text */
+            bottom: 30px;
             left: 50px;
-            background-color: #1f2833; /* Navy background */
+            background-color: #1f2833;
             color: white;
-            padding: 10px 20px;
-            border: 2px solid #c5c6c7; /* Outline color */
+            padding: calc(6px + 0.5vw) calc(10px + 0.8vw);
+            border: 2px solid #c5c6c7;
             border-radius: 15px;
-            font-size: 24px;
+            font-size: calc(14px + 0.8vw);
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s ease; /* Smooth transition for hover and click effects */
+            transition: all 0.3s ease;
         }
-        /* Hover Effect */
+
         .contact-button:hover {
-            box-shadow: 0 0 15px rgba(161, 184, 229, 0.8); /* Same drop shadow as search bar */
+            box-shadow: 0 0 15px rgba(161, 184, 229, 0.8);
         }
-        /* Click Effect */
+
         .contact-button:active {
-            background-color: #0e1318; /* Darker navy on click */
-            text-decoration: underline; /* Underline text on click */
+            background-color: #0e1318;
+            text-decoration: underline;
         }
-        .payment-methods, .warranties, .cancellations {
-            margin-bottom: 20px;
-            text-align: left;
-            max-width: 600px;
-            font-size: 18px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .order-methods {
-    text-align: left; /* Ensures all content is left-aligned */
-    max-width: 600px; /* Keeps content width reasonable */
-    margin: 0 auto; /* Centers the section while keeping text left-aligned */
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: -10px;
-}
-        .order-methods h3 {
-    font-size: 28px; /* Adjusted title size */
-    font-weight: bold;
-    color: #1f2833; /* Darker text color */
-    margin-bottom: 10px;
-}
 
-.order-methods p {
-    font-size: 18px; /* Slightly larger paragraph text */
-    font-weight: normal; /* Ensure it's not bold */
-    color: #1f2833;
-    margin-bottom: 10px;
-}
-
-.order-methods ul {
-    padding-left: 20px; /* Indent bullet points */
-}
-
-.order-methods li {
-    font-size: 16px;
-    font-weight: normal; /* Ensure normal font weight */
-    color: #1f2833;
-    margin-bottom: 8px;
-}
-
-.order-methods li b {
-    font-weight: bold; /* Only bold the key terms */
-}
-
-.order-methods a {
-    font-weight: bold;
-    text-decoration: underline;
-    color: #1f2833;
-}
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-
-        }.content-section {
+        .content-section {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
+            align-items: flex-start;
             margin: 20px auto;
             max-width: 1200px;
             padding: 0 20px;
+            gap: 20px;
         }
 
         .order-methods {
             flex: 1;
-            margin-right: 20px;
+            text-align: left;
+            max-width: 600px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .order-methods h3 {
+            font-size: calc(14px + 1.2vw);
+            font-weight: bold;
+            color: #1f2833;
+            margin-bottom: 20px;
+        }
+
+        .order-methods p {
+            font-size: calc(10px + 0.8vw);
+            font-weight: normal;
+            color: #1f2833;
+            margin-bottom: 20px;
+        }
+
+        .order-methods ul {
+            padding-left: 20px;
+        }
+
+        .order-methods li {
+            font-size: calc(10px + 0.8vw);
+            font-weight: normal;
+            color: #1f2833;
+            margin-bottom: 16px;
+        }
+
+        .order-methods li b {
+            font-weight: bold;
+        }
+
+        .order-methods a {
+            font-weight: bold;
+            text-decoration: underline;
+            color: #1f2833;
+            transition: all 0.3s ease;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .order-methods a:hover {
+            background-color: rgba(31, 40, 51, 0.1);
+            text-decoration: none;
+            outline: 1px solid #1f2833;
+        }
+
+        .order-methods a:active {
+            background-color: #1f2833;
+            color: white;
+            text-decoration: none;
         }
 
         .read-more {
             flex: 1;
             border: 2px solid #ccc;
             border-radius: 15px;
-            padding: 20px; /* Adjust padding to make it smaller */
-            padding-top: 45px; /* Adjust top padding to reduce space */
+            padding: 20px;
+            padding-top: 45px;
             text-align: center;
             display: flex;
             flex-direction: column;
-            justify-content: center; /* Vertically centers the content */
-            align-items: center; /* Horizontally centers the content */
+            justify-content: center;
+            align-items: center;
+            max-width: 50%;
             margin: 0 auto;
-            height: 100%; /* Ensure the container has height */
+            height: 100%;
         }
 
+        .mail {
+            flex: 1;
+            text-align: left;
+            max-width: 600px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin-bottom: 20px;
+        }
+
+        .mail p {
+            font-size: calc(14px + 0.8vw);
+            font-weight: normal;
+            color: #1f2833;
+            margin-bottom: 20px;
+        }
 
         .read-more h3 {
             margin-bottom: 26px;
             margin-top: -30px;
             color: #1D2F52;
-            font-size: 28px;
+            font-size: calc(16px + 0.8vw);
         }
 
         .read-more-buttons {
@@ -261,9 +295,9 @@
         .read-more-button {
             background-color: #1D2F52;
             color: white;
-            padding: 10px 20px;
+            padding: calc(6px + 0.5vw) calc(10px + 0.8vw);
             border-radius: 15px;
-            font-size: 24px;
+            font-size: calc(14px + 0.8vw);
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -279,43 +313,360 @@
             background-color: #0e1318;
             text-decoration: underline;
         }
+
+        .mailing-address {
+            display: none;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #1f2833;
+            text-align: left;
+        }
+
         footer {
-    background-color: #333; /* Dark background color for professional look */
-    color: #fff; /* White text */
-    padding: 20px 0; /* Padding for spacing */
-    text-align: center; /* Center the text */
-    position: relative; /* Not sticky */
-    width: 100%;
-}
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            width: 100%;
+            margin-top: 100px;
+        }
 
-.footer-content {
-    display: flex;
-    justify-content: center; /* Center the content */
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .footer-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.footer-logo {
-    max-width: 100px; /* Adjust logo size */
-    margin-left: 50px; /* Align logo to left with 50px margin */
-}
+        .footer-logo {
+            max-width: 100px;
+            margin-left: 50px;
+        }
 
-.footer-text {
-    margin-left: 20px; /* Space between logo and text */
-    font-size: 14px; /* Smaller text size for footer */
-    line-height: 1.5; /* Adjust line spacing */
-}
+        .footer-text {
+            margin-left: 20px;
+            font-size: calc(10px + 0.3vw);
+            line-height: 1.5;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .search-bar {
+                width: 100%;
+                margin: 10px 0;
+                max-width: none;
+            }
+
+            .content-section {
+                flex-direction: column;
+                align-items: center;
+                max-width: 1175px;
+                padding: 0 10px;
+            }
+
+            .order-methods {
+                margin-right: 0;
+                margin-bottom: 20px;
+                width: 100%;
+                display: block;
+                text-align: justify;
+            }
+
+            .read-more {
+                order: 2;
+                max-width: 100%;
+                padding: 20px;
+                padding-top: 30px;
+            }
+
+            .mailing-address {
+                display: block;
+                order: 1;
+            }
+
+            .hero-title {
+                left: 20px;
+                bottom: 120px;
+            }
+
+            .image-text {
+                left: 20px;
+                bottom: 80px;
+            }
+
+            .contact-button {
+                left: 20px;
+                bottom: 20px;
+            }
+        }
+
+        .search-icon {
+            display: none;
+            font-size: calc(16px + 0.5vw);
+            color: #1f2833;
+            cursor: pointer;
+            margin-right: 20px;
+        }
+
+        .hamburger-menu {
+            display: none;
+            font-size: calc(16px + 0.5vw);
+            color: #1f2833;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        .hamburger-menu:hover,
+        .search-icon:hover {
+            color: #666;
+        }
+
+        .mobile-nav-links {
+            display: none;
+            flex-direction: column;
+            background-color: #fff;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            border-bottom: 2px solid #000;
+        }
+
+        .mobile-nav-links a {
+            padding: 10px 20px;
+            color: #1f2833;
+            text-decoration: none;
+            font-size: calc(14px + 0.5vw);
+            border-bottom: 1px solid #ccc;
+        }
+
+        .mobile-nav-links a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-nav-links a:hover {
+            background-color: #f4f4f4;
+        }
+
+        .mobile-search-bar {
+            display: none;
+            padding: 10px 15px;
+            margin: 10px 20px;
+            width: calc(100% - 40px);
+            border: 2px solid #ccc;
+            border-radius: 25px;
+            font-size: calc(12px + 0.3vw);
+            outline: none;
+        }
+
+        /* Close Button for Mobile Nav */
+        .close-btn {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: calc(16px + 0.5vw);
+            color: #1f2833;
+            cursor: pointer;
+        }
+
+        .close-btn:hover {
+            color: #666;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1250px) {
+            .content-section {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 20px;
+            }
+
+            .order-methods {
+                max-width: 50%;
+                flex: 1;
+                margin-bottom: 0;
+            }
+
+            .search-bar {
+                display: none;
+            }
+
+            .search-icon {
+                display: block;
+                position: absolute;
+                right: 20px;
+            }
+
+            .nav-links {
+                justify-content: flex-start;
+                margin-right: 60px;
+            }
+
+            .nav-links a {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 950px) {
+            .order-methods br:not(.mail br) {
+                display: none;
+            }
+
+            .content-section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+            }
+
+            .order-methods {
+                max-width: 100%;
+            }
+
+            .read-more {
+                max-width: 100%;
+                margin-top: 270px;
+                margin-left: 280px;
+                position: absolute;
+                width: auto;
+                height: auto;
+                padding: 40px;
+                box-sizing: border-box;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger-menu {
+                display: block;
+            }
+
+            .logo-container {
+                margin-left: 0;
+                flex-grow: 1;
+                justify-content: center;
+            }
+
+            .mail {
+                margin-left: 70px;
+                margin-top: 130px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero-title {
+                font-size: calc(18px + 3vw);
+                bottom: 100px;
+            }
+
+            .image-text {
+                font-size: calc(12px + 1.5vw);
+                bottom: 70px;
+            }
+
+            .contact-button {
+                font-size: calc(12px + 0.8vw);
+                bottom: 15px;
+            }
+
+            .mail {
+                margin-left: 40px;
+            }
+
+            .order-methods h3 {
+                font-size: calc(16px + 1.2vw);
+            }
+
+            .order-methods p, 
+            .order-methods li, 
+            .mail p {
+                font-size: calc(10px + 0.8vw);
+            }
+            .read-more{
+                margin-top: 300px;
+                width: auto;
+                height: auto;
+                margin-left: 270px;
+                margin-right: 10px;
+            }
+            .read-more-button {
+                font-size: calc(10px + 0.8vw);
+            }
+        }
+
+        /* New responsive adjustments for the x-ray image */
+        @media (max-width: 1200px) {
+            .xray-image {
+                height: 500px;
+            }
+            .hero-title {
+                bottom: 130px;
+            }
+            .image-text {
+                bottom: 90px;
+            }
+            .contact-button {
+                bottom: 25px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .xray-image {
+                height: 400px;
+            }
+            .hero-title {
+                bottom: 110px;
+            }
+            .image-text {
+                bottom: 70px;
+            }
+            .contact-button {
+                bottom: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .xray-image {
+                height: 350px;
+            }
+            .hero-title {
+                bottom: 100px;
+            }
+            .image-text {
+                bottom: 60px;
+            }
+            .contact-button {
+                bottom: 15px;
+            }
+        }
 
     </style>
 </head>
 <body>
     <nav>
+        <div class="hamburger-menu" onclick="toggleMobileNav()">
+            <i class="fas fa-bars"></i>
+        </div>
         <div class="logo-container">
             <img src="logo.png" alt="Logo" class="logo">
             <div class="company-name">
                 PACIFIC<br>NORTHWEST<br>X-RAY INC.
             </div>
+        </div>
+        <div class="search-icon" onclick="toggleSearchBar()">
+            <i class="fas fa-search"></i>
         </div>
         <div class="nav-links">
             <a href="javascript:void(0);"><span>Equipment</span> <i class="fas fa-chevron-down"></i></a>
@@ -324,6 +675,16 @@
             <a href="javascript:void(0);"><span>Parts</span> <i class="fas fa-chevron-down"></i></a>
             <input type="text" placeholder="Search for X-Ray Products..." class="search-bar">
         </div>
+        <div class="mobile-nav-links" id="mobileNavLinks">
+            <div class="close-btn" onclick="toggleMobileNav()">
+                <i class="fas fa-times"></i>
+            </div>
+            <a href="javascript:void(0);"><span>Equipment</span> <i class="fas fa-chevron-down"></i></a>
+            <a href="javascript:void(0);"><span>Accessories</span> <i class="fas fa-chevron-down"></i></a>
+            <a href="javascript:void(0);"><span>Supplies</span> <i class="fas fa-chevron-down"></i></a>
+            <a href="javascript:void(0);"><span>Parts</span> <i class="fas fa-chevron-down"></i></a>
+        </div>
+        <input type="text" placeholder="Search for X-Ray Products..." class="mobile-search-bar" id="mobileSearchBar">
     </nav>
     <div class="container">
         <div class="image-container">
@@ -336,20 +697,24 @@
             <div class="order-methods">
                 <h3>How to Place an Order</h3>
                 <p><strong>Order Methods:</strong> You can place an order with us in the following ways:</p>
-                <ul>
-                    <li><b>By Phone:</b> Call us at (800) 827-9729 or (503) 667-3000<br>(Monday to Friday, 8 AM to 5 PM PT).</li>
-                    <li><b>By Email:</b> Download and complete our <a href="#">order form</a>,<br>then email to sales@pnwx.com.</li>
-                    <li><b>By Fax:</b> Download and complete our <a href="#">order form</a>,<br>then fax it: (503) 666-8855.</li>
-                    <li><b>By Mail:</b> Download and complete our <a href="#">order form</a>, then mail it<br>to (call and ask for freight charges):<br>
-                        <br>
+                <ul className="list2">
+                    <li><b>By Phone:</b> Call us at (800) 827-9729 or (503) 667-3000 <br>(Monday to Friday, 8 AM to 5 PM PT).</li>
+                    <li><b>By Email:</b> Download and complete our <a href="javascript:void(0)">order form</a>, <br>then email to sales@pnwx.com.</li>
+                    <li><b>By Fax:</b> Download and complete our <a href="javascript:void(0)">order form</a>, <br>then fax it: (503) 666-8855.</li>
+                    <li><b>By Mail:</b> Download and complete our <a href="javascript:void(0)">order form</a>, then mail it <br>to (call and ask for freight charges):<br>
+                        <!-- <br>
                         ATTN: Order Processing <br>
                         Pacific Northwest X-Ray Inc. <br>P.O. Box 625<br>
                         Gresham, OR 97030<br>
-                        USA
+                        USA -->
                     </li>
+                    <p class="mail">ATTN: Order Processing <br>
+                        Pacific Northwest X-Ray Inc. <br>P.O. Box 625<br>
+                        Gresham, OR 97030<br>
+                        USA</p>
                 </ul>
             </div>
-            
+
             <div class="read-more">
                 <h3>Click to Read More</h3>
                 <div class="read-more-buttons">
@@ -369,7 +734,34 @@
                 </div>
             </div>
         </footer>
-        
     </div>
+    <script>
+        function toggleMobileNav() {
+            const mobileNavLinks = document.getElementById("mobileNavLinks");
+            const closeBtn = document.querySelector(".close-btn");
+            if (mobileNavLinks.style.display === "flex") {
+                mobileNavLinks.style.display = "none";
+                closeBtn.style.display = "none";
+            } else {
+                mobileNavLinks.style.display = "flex";
+                closeBtn.style.display = "block";
+            }
+        }
+
+        function toggleSearchBar() {
+            const mobileSearchBar = document.getElementById("mobileSearchBar");
+            mobileSearchBar.style.display = mobileSearchBar.style.display === "block" ? "none" : "block";
+        }
+
+        // Close mobile nav when clicking outside
+        document.addEventListener("click", function (event) {
+            const mobileNavLinks = document.getElementById("mobileNavLinks");
+            const hamburgerMenu = document.querySelector(".hamburger-menu");
+            if (mobileNavLinks.style.display === "flex" && !hamburgerMenu.contains(event.target)) {
+                mobileNavLinks.style.display = "none";
+                document.querySelector(".close-btn").style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
