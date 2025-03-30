@@ -146,15 +146,6 @@
     }
 }
 
-.website-descr2 a {
-    color: #66fcf1; /* Change this to your preferred link color */
-    text-decoration: none; /* Remove underline */
-}
-
-.website-descr2 a:visited {
-    color: #45a29e; /* Change this to the color when the link is visited */
-}
-
 /* Carousel Styling */
 .carousel {
     display: flex;

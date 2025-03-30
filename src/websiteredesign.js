@@ -105,10 +105,15 @@ function NewPage() {
             </div>
 
             <p className="website-descr2">
-                I chose {" "}
-                <a href="https://www.pnwx.com/" target="_blank" rel="noopener noreferrer">
-                    Pacific Northwest X-Ray Inc
-                </a>{" "}
+                I chose-
+                <a 
+                href="https://www.pnwx.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="teal-link"
+            >
+                 Pacific Northwest X-Ray Inc.
+            </a>
                 's website because it presents a good opportunity to explore how a dated design and poor user experience can be improved through a modern, responsive redesign.
             </p>
 
