@@ -1,7 +1,7 @@
 /* General Page Styling */
 .app-container {
-    background-color: #1f2833;
-    color: #c5c6c7;
+    background-color: #1E1E1E;
+    color: #B4B4B9;
     min-height: 100vh;
     padding: 20px;
 }
@@ -11,7 +11,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #66fcf1;
+    color: #20C0F0;
     font-size: 2rem;
     margin-bottom: 20px;
 }
@@ -35,7 +35,7 @@
 }
 
 .sidebar h2 {
-    color: #66fcf1;
+    color: #20C0F0;
     text-align: center;
     font-size: 1.5rem;
     margin-bottom: 10px;
@@ -53,21 +53,21 @@
 
 .sidebar ul li a {
     text-decoration: none;
-    color: #c5c6c7;
+    color: #B4B4B9;
     font-size: 1rem;
     display: block;
     transition: 0.2s ease-in-out;
 }
 
 .sidebar ul li a:hover {
-    color: #66fcf1;
+    color: #20C0F0;
 }
 
 /* Hamburger Icon */
 .hamburger {
     font-size: 2rem;
     cursor: pointer;
-    color: #66fcf1;
+    color: #20C0F0;
     position: absolute;
     top: 15px;
     left: 20px;
@@ -81,12 +81,12 @@
     font-size: 1.5rem;
     background: none;
     border: none;
-    color: #c5c6c7;
+    color: #B4B4B9;
     cursor: pointer;
 }
 
 .close-btn2:hover {
-    color: #66fcf1;
+    color: #20C0F0;
 }
 
 /* Page Content */
@@ -99,7 +99,7 @@
 
 .new-page-container p {
     font-size: 1.0rem;
-    color: #c5c6c7;
+    color: #B4B4B9;
     max-width: 1175px;
     line-height: 1.6;
 }
@@ -112,7 +112,7 @@
 
 .website-descr p {
     font-size: 1.0rem;
-    color: #c5c6c7;
+    color: #B4B4B9;
     max-width: 1175px;
     line-height: 1.6;
 }
@@ -126,7 +126,7 @@
 
 .website-descr2 p {
     font-size: 1.0rem;
-    color: #c5c6c7;
+    color: #B4B4B9;
     max-width: 1175px;
     line-height: 1.6;
 }
@@ -152,7 +152,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #2b3948;
+    background-color: #1a1a1a;
     padding: 20px;
     margin: 20px auto;
     max-width: 1300px; /* Increased width */
@@ -169,7 +169,7 @@
     transform: translateY(-50%);
     background-color: transparent;
     border: none;
-    color: #66fcf1;
+    color: #20C0F0;
     font-size: 2.5rem; /* Made arrows slightly bigger */
     cursor: pointer;
     transition: 0.3s ease-in-out;
@@ -202,7 +202,7 @@
 
 /* Centered Title Inside Carousel */
 .carousel h2 {
-    color: #66fcf1;
+    color: #20C0F0;
     font-size: 1.8rem; /* Increased font size */
     margin-bottom: 20px; /* More spacing below */
     text-align: center;
@@ -251,7 +251,7 @@
 
 .recommendations h2 {
     font-size: 1.8rem;
-    color: #66fcf1;
+    color: #20C0F0;
 }
 
 /* Visual Redesign Section */
@@ -262,13 +262,13 @@
 }
 
 .visual-redesign h2 {
-    color: #66fcf1;
+    color: #20C0F0;
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
 
 .visual-redesign p {
-    color: #c5c6c7;
+    color: #B4B4B9;
     font-size: 1.2rem;
     margin-bottom: 20px;
 }
@@ -288,7 +288,7 @@
 }
 
 .device-preview h2 {
-    color: #66fcf1;
+    color: #20C0F0;
     font-size: 1.8rem;
     margin-top: -60px;
 }
@@ -323,7 +323,7 @@
 }
 
 .device-preview h2 {
-    color: #66fcf1;
+    color: #20C0F0;
     font-size: 1.8rem;
     margin-bottom: 15px;
 }
@@ -359,7 +359,7 @@
 }
 
 .device-buttons button {
-    background-color: #66fcf1;
+    background-color: #20C0F0;
     color: #0b0c10;
     font-size: 1rem;
     padding: 10px 20px;
@@ -370,7 +370,7 @@
 }
 
 .device-buttons button:hover {
-    background-color: #45a29e;
+    background-color: #198fb3;
 }
 
 .mockdescr {
@@ -384,16 +384,16 @@
 
 .teal-link {
     margin-top: 0px;
-    color: #66fcf1; /* Light teal (default) */
+    color: #20C0F0; /* Light teal (default) */
     text-decoration: none; /* No underline by default */
     transition: color 0.2s ease; /* Smooth color transition */
   }
   
   .teal-link:hover {
-    color: #45a29e; /* Darker teal on hover */
+    color: #198fb3; /* Darker teal on hover */
     text-decoration: underline; /* Underline on hover */
   }
   
   .teal-link:active {
-    color: #c5c6c7; /* Dark navy flash on click */
+    color: #B4B4B9; /* Dark navy flash on click */
   }

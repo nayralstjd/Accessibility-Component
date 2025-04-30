@@ -1,9 +1,10 @@
 /* Set global background color */
 body {
-  background-color: #1f2833; /* Navy blue background */
+  background-color: #1E1E1E; /* Changed to dark gray */
   margin: 0;
   font-family: Arial, sans-serif;
   overflow-x: hidden; /* Prevent horizontal scrolling */
+  color: #B4B4B9; /* Default text color */
 }
 
 /* Center homepage content */
@@ -13,13 +14,12 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh; /* Full screen height */
-  color: #c5c6c7;
   text-align: center;
 }
 
 .homepage h1 {
   font-size: 3rem;
-  color: #66fcf1;
+  color: #20C0F0; /* Bright blue for main title */
   margin-bottom: 20px;
 }
 
@@ -27,45 +27,45 @@ body {
   font-size: 2rem;
   background: none;
   border: none;
-  color: #66fcf1; /* Light cyan color for the hamburger */
+  color: #20C0F0; /* Changed to bright blue */
   cursor: pointer;
   padding: 10px;
   position: absolute;
   top: 20px;
   left: 20px;
   z-index: 1100;
-  transition: transform 0.3s ease, background-color 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 /* Hover effect for hamburger */
 .hamburger:hover {
-  color: #45a29e; /* Change color on hover */
-  transform: scale(1.1); /* Slightly enlarge the icon */
-  background-color: rgba(102, 252, 241, 0.2); /* Slight background color change */
-  border-radius: 5px; /* Optional: Rounded corners */
+  color: #1aa0d0; /* Darker blue on hover */
+  transform: scale(1.1);
+  background-color: rgba(32, 192, 240, 0.2); /* Matching blue tint */
+  border-radius: 5px;
 }
 
 /* Sidebar Styling */
 .sidebar {
   width: 250px;
   height: 100%;
-  background-color: #1f2833;
-  color: #c5c6c7;
+  background-color: #1E1E1E; /* Dark gray to match body */
+  color: #B4B4B9; /* Light gray text */
   padding: 20px;
   position: fixed;
-  left: -300px; /* Initially hidden off-screen */
+  left: -300px;
   top: 0;
   bottom: 0;
-  transition: left 0.3s ease; /* Slide in animation */
+  transition: left 0.3s ease;
   z-index: 1000;
 }
 
 .sidebar.open {
-  left: 0; /* Slide in when open */
+  left: 0;
 }
 
 .sidebar h2 {
-  color: #66fcf1;
+  color: #20C0F0; /* Bright blue for headings */
   margin-bottom: 20px;
   font-size: 1.75rem;
   font-weight: bold;
@@ -81,7 +81,7 @@ body {
 }
 
 .sidebar a {
-  color: #c5c6c7;
+  color: #B4B4B9; /* Light gray text */
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 600;
@@ -89,36 +89,33 @@ body {
 }
 
 .sidebar a:hover {
-  color: #45a29e;
+  color: #20C0F0; /* Bright blue on hover */
 }
 
 .sidebar a:active {
-  color: #66fcf1;
+  color: #1aa0d0; /* Slightly darker blue when active */
 }
 
 /* Close button in sidebar */
-.close-btn {
+.close-btn, .close-btn2 {
   font-size: 2rem;
   background: none;
   border: none;
-  color: #c5c6c7;
+  color: #B4B4B9; /* Light gray */
   cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 1101; /* Make sure the close button is above the content */
+  z-index: 1101;
+  transition: color 0.3s ease;
 }
 
 .close-btn2 {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: #c5c6c7;
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
   right: 34px;
-  z-index: 1101; /* Make sure the close button is above the content */
+}
+
+.close-btn:hover, .close-btn2:hover {
+  color: #20C0F0; /* Bright blue on hover */
 }
 
 /* Media query for smaller screens */

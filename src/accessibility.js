@@ -242,19 +242,19 @@ function RedesignedLayout() {
     <div className="redesign-container">
       {/* First Row: Mouse Interaction Images */}
       <div className="image-row">
-        <h3 style={{ color: "#66fcf1" }}>Mouse User State Model & Revisions</h3>
+        <h3>Mouse User State Model & Revisions</h3>
         <img src="/mouse.png" alt="Mouse Interaction 1" className="small-image-left-image" />
         <span className="fancy-arrow">➜</span>
         <img src="/mouse2.png" alt="Mouse Interaction 2" className="small-image-right-image" />
       </div>
       <div className="red1">
         <ul>
-      <p style = {{ color:"#c5c6c7"}}>One of the first things I noticed with Spotify's UI was that the shortcut appeared only when you hover over the search bar with the mouse. And I thought that was counterintuitive. For non-mouse users, this simply wouldn't be a shortcut you would ever discover. So, that was the first fix I wanted to address.</p>
+      <p>One of the first things I noticed with Spotify's UI was that the shortcut appeared only when you hover over the search bar with the mouse. And I thought that was counterintuitive. For non-mouse users, this simply wouldn't be a shortcut you would ever discover. So, that was the first fix I wanted to address.</p>
       </ul>
       </div>
       {/* Second Row: Keyboard Interaction Image and Text Box */}
       <div className="image-row">
-  <h3 style={{ color: "#66fcf1" }}>Keyboard User State Model</h3>
+  <h3>Keyboard User State Model</h3>
   <div className="keyboard-and-textbox">
     <img src="/keyboard.png" alt="Keyboard Interaction" className="small-image-left-image3" />
     <div className="text-box">
@@ -275,14 +275,14 @@ function RedesignedLayout() {
 
       {/* Third Row: Shortcut Images */}
       <div className="image-row">
-        <h3 style={{ color: "#66fcf1" }}>Shortcut User State Model & Revisions</h3>
+        <h3>Shortcut User State Model & Revisions</h3>
         <img src="/shortcut.png" alt="Shortcut Interaction 1" className="small-image-left-image2" />
         <span className="fancy-arrow2">➜</span>
         <img src="/shortcut2.png" alt="Shortcut Interaction 2" className="small-image-right-image2" />
       </div>
       <div className="red1">
         <ul>
-      <p style = {{ color:"#c5c6c7"}}>Another fix was changing how the shortcut worked. This change introduces an intentional tradeoff: while directing users to the main search bar improves consistency and avoids the need for an extra Escape action, it also means they lose the ability to start a separate, more focused search session. However, this approach prioritizes a more seamless and predictable experience, reducing cognitive load and making navigation more intuitive.</p>
+      <p>Another fix was changing how the shortcut worked. This change introduces an intentional tradeoff: while directing users to the main search bar improves consistency and avoids the need for an extra Escape action, it also means they lose the ability to start a separate, more focused search session. However, this approach prioritizes a more seamless and predictable experience, reducing cognitive load and making navigation more intuitive.</p>
       </ul>
       </div>
     </div>
@@ -411,9 +411,9 @@ function App() {
   };
 
   return (
-    <div className="app-container" style={{ backgroundColor: "#1f2833", color: "#c5c6c7" }}>
+    <div className="app-container">
       <header className="project-header">
-        <h1 style={{ color: "#66fcf1" }}>Accessible Components & Redesign</h1>
+        <h1>Accessible Components & Redesign</h1>
         
         {/* Three-line hamburger icon for sidebar */}
         <div className="hamburger" onClick={toggleSidebar}>
@@ -475,7 +475,7 @@ function App() {
 
       {/* Separator and Title for the Table */}
       <section className="comparison-title">
-        <h3 style={{ color: "#66fcf1" }}>Let's Visualize This!</h3>
+        <h3>Let's Visualize This!</h3>
       </section>
 
       {/* The Comparison Table */}
@@ -538,7 +538,7 @@ function App() {
 
       {/* Comparison Summary */}
       <section className="comparison-summary">
-        <h3 style={{ color: "#66fcf1" }}>Takeaways!</h3>
+        <h3>Takeaways!</h3>
         <ul>
           <p>
             One aspect I liked about YouTube was the structured UI—when clicking the search bar, the newly appearing icon matches the one in the search dropdown, reinforcing usability. Spotify, in contrast, makes searching feel more interactive and dynamic, though its Command + K function's new search bar seems redundant and out of place. The Photos App, while uninspired, aligns with its primary use case—most users will browse by scrolling rather than typing in a search bar, making its minimal search functionality more acceptable.
@@ -560,7 +560,7 @@ function App() {
       <OutputTable />
       
       <section className="comparison-summary">
-        <h3 style={{ color: "#66fcf1" }}>Takeaways!</h3>
+        <h3>Takeaways!</h3>
         <ul>
           <p>
             In terms of accessibility, YouTube excels with a well-structured interface, offering clear visual feedback and intuitive keyboard navigation. The expanding search bar and the / shortcut make it easy to interact, although the autocomplete feature could be improved for better keyboard-only users. Spotify, while offering a dynamic experience, can be overwhelming with its multiple shortcuts. The Photos app, though simple, lacks strong visual cues and accessibility features. However, its drag-and-drop image search functionality is a unique benefit for users looking for a more specific use case.
@@ -569,7 +569,7 @@ function App() {
       </section>
 
       <section className="redesign-title">
-        <p style={{ color: "#66fcf1" }}>State Models & Component Redesign</p>
+        <p>State Models & Component Redesign</p>
       </section>
       <ul>
         <p className="statemodelinfo1">
@@ -577,11 +577,11 @@ function App() {
         </p>
       </ul>
       <RedesignedLayout />
-      <h3 style={{ color: "#66fcf1" }}>Redesign</h3>
+      <h3>Redesign</h3>
       <p className="redesigninfo">So let's visualize what this would look like! Drag the progress bar to jump to any part instantly!</p>
       <VideoPlayer />
       
-      <h2 style={{ color: "#66fcf1" }}>Redesigned Spotify's New Look</h2>
+      <h2>Redesigned Spotify's New Look</h2>
 
       {/* New Spotify Video as Always Playing */}
       <div className="video-container">
@@ -599,7 +599,7 @@ function App() {
         />
       </div>
       
-      <h2 style={{ color: "#66fcf1" }}>Reflection</h2>
+      <h2>Reflection</h2>
       <div className="reflection-section">
         <ul>
           <p>
