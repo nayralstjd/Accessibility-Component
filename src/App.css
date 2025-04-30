@@ -58,7 +58,7 @@ p strong {
 }
 
 .light-blue {
-  color: #5DBCD2; /* Changed teal to a brighter blue */
+  color: #20C0F0; /* Changed teal to a brighter blue */
 }
 
 .carousel-content {
@@ -72,7 +72,7 @@ p strong {
   -webkit-overflow-scrolling: touch; /* Better scrolling on iOS */
   padding-bottom: 20px;
   scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #5DBCD2 #1f1f1f; /* Updated colors */
+  scrollbar-color: #20C0F0 #1f1f1f; /* Updated colors */
 }
 
 .carousel-content::-webkit-scrollbar {
@@ -98,7 +98,7 @@ p strong {
 .arrow {
   background: none;
   border: none;
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
   font-size: 2.5rem; /* Slightly larger arrows */
   cursor: pointer;
   position: absolute;
@@ -160,11 +160,11 @@ li {
 }
 
 .highlighted {
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
 }
 
 .Observations {
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
   align-self: center;
   font-size: 1.5rem;
   font-weight: 700;
@@ -172,7 +172,7 @@ li {
 }
 
 .view-more-btn {
-  background-color: #5DBCD2; /* Brighter blue */
+  background-color: #20C0F0; /* Brighter blue */
   align-self: last baseline;
   color: #1E1E1E; /* Dark gray text */
   border: none;
@@ -229,7 +229,7 @@ li {
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
   cursor: pointer;
   position: absolute;
   top: 10px;
@@ -245,7 +245,7 @@ li {
 }
 
 .view-more-btn2 {
-  background-color: #5DBCD2; /* Brighter blue */
+  background-color: #20C0F0; /* Brighter blue */
   align-self: last baseline;
   color: #1E1E1E; /* Dark gray text */
   border: none;
@@ -273,7 +273,7 @@ li {
 }
 
 .flip-btn-interactive {
-  background-color: #5DBCD2; /* Brighter blue */
+  background-color: #20C0F0; /* Brighter blue */
   color: #1E1E1E; /* Dark gray text */
   border: none;
   padding: 8px 14px;
@@ -390,7 +390,7 @@ td, th {
 }
 
 .outputobs{
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
   align-self: center;
   font-size: 1.5rem;
   font-weight: 700;
@@ -448,7 +448,7 @@ td, th {
   position: relative;
   top: -160px;
   font-size: 2rem;
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
   font-weight: bold;
   margin: 0 15px;
   display: inline-block;
@@ -461,7 +461,7 @@ td, th {
   position: relative;
   top: -180px;
   font-size: 2rem;
-  color: #5DBCD2; /* Brighter blue */
+  color: #20C0F0; /* Brighter blue */
   font-weight: bold;
   margin: 0 15px;
   display: inline-block;
