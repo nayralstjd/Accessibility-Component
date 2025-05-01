@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryan's Portfolio</title>
+  <style>
+    /* Navbar Styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1E1E1E;
+      color: #B4B4B9;
+    }
+    
+    .navbar {
+      background-color: #1E1E1E;
+      padding: 1.5rem 3rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .nav-logo a {
+      color: #20C0F0;
+      font-size: 2.2rem;
+      font-weight: 700;
+      text-decoration: none;
+      letter-spacing: 1px;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      padding: 0.5rem 0;
+    }
+    
+    .nav-logo a:hover {
+      color: #1aa0d0;
+      transform: translateY(-2px);
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+    }
+    
+    .nav-link {
+      color: #B4B4B9;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      position: relative;
+      padding: 0.5rem 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Update the nav-link-text alignment */
+    .nav-link-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+    padding-bottom: 1px; /* Added to compensate for icon adjustment */
+    }
+    /* .nav-link-text {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      position: relative;
+      z-index: 2;
+      transition: all 0.3s ease;
+    } */
+    
+    .nav-link-underline {
+      height: 2px;
+      width: 0;
+      background: #20C0F0;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .nav-link:hover .nav-link-text {
+      color: #20C0F0;
+      transform: translateY(-2px);
+    }
+    
+    .nav-link:hover .nav-link-underline {
+      width: 100%;
+    }
+    
+    /* Dropdown Icon
+    .dropdown-icon {
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      color: #B4B4B9;
+      margin-left: 8px;
+      width: 25px;
+      height: 25px;
+      position: relative;
+      top: 2px;
+    } */
+    
+    /* Update the dropdown icon styles */
+    .dropdown-icon {
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #B4B4B9;
+    margin-left: 8px;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 1px; /* Adjusted from 2px to 1px for better alignment */
+    }
+
+
+    .dropdown-icon.open {
+      transform: rotate(180deg);
+      color: #20C0F0;
+    }
+    
+    .nav-link:hover .dropdown-icon {
+      color: #20C0F0;
+    }
+    
+    /* Dropdown Container */
+    .dropdown-container {
+      position: relative;
+      cursor: pointer;
+      padding-bottom: 15px;
+    }
+    
+    .dropdown-container::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background: transparent;
+    }
+    
+    /* Dropdown Menu */
+    .dropdown-menu {
+      position: absolute;
+      top: calc(100% + 15px);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #2D2D2D;
+      border-radius: 8px;
+      padding: 1.5rem;
+      min-width: 280px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      display: none;
+      flex-direction: column;
+      gap: 1.2rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .dropdown-container:hover .dropdown-menu {
+      display: flex;
+    }
+    
+    .dropdown-item {
+      color: #B4B4B9;
+      text-decoration: none;
+      padding: 0.8rem 1.2rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    
+    .dropdown-item:hover {
+      color: #20C0F0;
+      background: rgba(32, 192, 240, 0.15);
+      transform: translateX(5px);
+    }
+    
+    .dropdown-item .dropdown-icon {
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+    
+    .dropdown-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    
+    .dropdown-subtitle {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      margin-top: 0.2rem;
+    }
+    
+    /* Content adjustment */
+    .homepage {
+      margin-top: 100px;
+      padding: 2rem 3rem;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .navbar {
+        padding: 1.2rem;
+      }
+      
+      .nav-logo a {
+        font-size: 1.8rem;
+      }
+      
+      .nav-links {
+        gap: 1.5rem;
+      }
+      
+      .dropdown-menu {
+        left: -100%;
+        transform: translateX(0);
+        min-width: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <a href="/homepage.html">Ryan</a>
+      </div>
+      
+      <div class="nav-links">
+        <a href="/homepage.html" class="nav-link">
+          <span class="nav-link-text">Home</span>
+          <span class="nav-link-underline"></span>
+        </a>
+        
+        <div class="nav-link dropdown-container">
+          <span class="nav-link-text">
+            Work
+            <svg 
+              class="dropdown-icon" 
+              width="25" 
+              height="25" 
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M7 10l5 5 5-5z" />
+            </svg>
+          </span>
+          <span class="nav-link-underline"></span>
+          <div class="dropdown-menu">
+            <a href="/accessibility-redesign" class="dropdown-item">
+              <span class="dropdown-icon">⎋</span>
+              <div>
+                <div class="dropdown-title">Accessibility Redesign</div>
+                <div class="dropdown-subtitle">Project 1</div>
+              </div>
+            </a>
+            <a href="/personas-storyboarding" class="dropdown-item">
+              <span class="dropdown-icon">⎋</span>
+              <div>
+                <div class="dropdown-title">Personas & Storyboarding</div>
+                <div class="dropdown-subtitle">Project 2</div>
+              </div>
+            </a>
+            <a href="/websiteredesign" class="dropdown-item">
+              <span class="dropdown-icon">⎋</span>
+              <div>
+                <div class="dropdown-title">Website Redesign</div>
+                <div class="dropdown-subtitle">Project 3</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        
+        <a href="/about" class="nav-link">
+          <span class="nav-link-text">About</span>
+          <span class="nav-link-underline"></span>
+        </a>
+        
+        <a href="/fun" class="nav-link">
+          <span class="nav-link-text">Fun</span>
+          <span class="nav-link-underline"></span>
+        </a>
+
+        <a href="/resume" class="nav-link">
+          <span class="nav-link-text">Resume</span>
+          <span class="nav-link-underline"></span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="homepage">
+    <h1>Welcome</h1>
+    <!-- Content goes here -->
+  </div>
+
+  <script>
+    // Simple JavaScript to handle dropdown functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownContainer = document.querySelector('.dropdown-container');
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      const dropdownIcon = document.querySelector('.dropdown-icon');
+      let dropdownTimeout;
+      
+      dropdownContainer.addEventListener('mouseenter', function() {
+        clearTimeout(dropdownTimeout);
+        dropdownMenu.style.display = 'flex';
+        dropdownIcon.classList.add('open');
+      });
+      
+      dropdownContainer.addEventListener('mouseleave', function() {
+        dropdownTimeout = setTimeout(() => {
+          dropdownMenu.style.display = 'none';
+          dropdownIcon.classList.remove('open');
+        }, 300);
+      });
+      
+      dropdownMenu.addEventListener('mouseenter', function() {
+        clearTimeout(dropdownTimeout);
+      });
+      
+      dropdownMenu.addEventListener('mouseleave', function() {
+        dropdownTimeout = setTimeout(() => {
+          dropdownMenu.style.display = 'none';
+          dropdownIcon.classList.remove('open');
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html>

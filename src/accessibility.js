@@ -430,7 +430,7 @@ function App() {
         <ul>
           {/* Homepage */}
           <li>
-            <Link to="/">Homepage</Link> {/* Link to itself */}
+            <Link to="/public/homepage.html">Homepage</Link> {/* Link to itself */}
           </li>
           {/* Link for Project 1 */}
           <li>
