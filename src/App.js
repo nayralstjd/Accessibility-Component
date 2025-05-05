@@ -4,6 +4,9 @@ import AccessibilityRedesign from "./accessibility";
 import PersonasStoryboarding from "./PersonasStoryboarding";
 import Redesign from "./websiteredesign";
 import "./sidebar.css";
+import About from "./about.js";
+import Resume from "./resume.js";
+import Cohive from "./cohive.js";
 
 const Navbar = () => {
   const [isWorkHovered, setIsWorkHovered] = useState(false);
@@ -66,22 +69,29 @@ const Navbar = () => {
                 <Link to="/accessibility-redesign" className="dropdown-item">
                   <span className="dropdown-icon">⎋</span>
                   <div>
-                    <div className="dropdown-title">Accessibility Redesign</div>
-                    <div className="dropdown-subtitle">Project 1</div>
+                    <div className="dropdown-title">Search Bars Design</div>
+                    <div className="dropdown-subtitle">Spotify, Youtube, Photos App</div>
                   </div>
                 </Link>
                 <Link to="/personas-storyboarding" className="dropdown-item">
                   <span className="dropdown-icon">⎋</span>
                   <div>
-                    <div className="dropdown-title">Personas & Storyboarding</div>
-                    <div className="dropdown-subtitle">Project 2</div>
+                    <div className="dropdown-title">Vending Machine User</div>
+                    <div className="dropdown-subtitle">User Experience Research</div>
                   </div>
                 </Link>
                 <Link to="/websiteredesign" className="dropdown-item">
                   <span className="dropdown-icon">⎋</span>
                   <div>
                     <div className="dropdown-title">Website Redesign</div>
-                    <div className="dropdown-subtitle">Project 3</div>
+                    <div className="dropdown-subtitle">Pacific Northwest X-Ray Inc.</div>
+                  </div>
+                </Link>
+                <Link to="/cohive.js" className="dropdown-item">
+                  <span className="dropdown-icon">⎋</span>
+                  <div>
+                    <div className="dropdown-title">CoHive</div>
+                    <div className="dropdown-subtitle">Outreach Strategy + Software Framework</div>
                   </div>
                 </Link>
               </div>
@@ -93,15 +103,17 @@ const Navbar = () => {
             <span className="nav-link-underline"></span>
           </Link>
           
-          <Link to="/fun" className="nav-link">
+          {/* <Link to="/fun" className="nav-link">
             <span className="nav-link-text">Fun</span>
             <span className="nav-link-underline"></span>
-          </Link>
+          </Link> */}
 
           <Link to="/resume" className="nav-link">
             <span className="nav-link-text">Resume</span>
             <span className="nav-link-underline"></span>
           </Link>
+
+    
 
         </div>
       </div>
@@ -136,6 +148,9 @@ const AppRouter = () => {
         <Route path="/accessibility-redesign" element={<AccessibilityRedesign />} />
         <Route path="/personas-storyboarding" element={<PersonasStoryboarding />} />
         <Route path="/websiteredesign" element={<Redesign />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/resume" element={<Resume />} />
+        <Route path="/cohive.js" element={<Cohive />} />
         {/* Add routes for About and Fun Resume when ready */}
       </Routes>
     </Router>

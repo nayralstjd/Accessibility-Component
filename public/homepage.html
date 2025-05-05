@@ -5,17 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan's Portfolio</title>
   <style>
-    /* Navbar Styles */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #1E1E1E;
+      background-color: #00040F;
       color: #B4B4B9;
     }
     
     .navbar {
-      background-color: #1E1E1E;
-      padding: 1.5rem 3rem;
+      background-color: #00040F;
+      /* padding: 1.5rem 3rem; */
+      padding: 1rem clamp(1rem, 5vw, 3rem);
       position: fixed;
       top: 0;
       left: 0;
@@ -35,7 +35,8 @@
     
     .nav-logo a {
       color: #20C0F0;
-      font-size: 2.2rem;
+      /* font-size: 2.2rem; */
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
       font-weight: 700;
       text-decoration: none;
       letter-spacing: 1px;
@@ -53,9 +54,12 @@
       display: flex;
       gap: 3rem;
       align-items: center;
+      gap: clamp(1rem, 3vw, 3rem);
+      
     }
     
     .nav-link {
+      font-size: clamp(0.9rem, 2vw, 1.2rem);
       color: #B4B4B9;
       text-decoration: none;
       font-size: 1.2rem;
@@ -66,24 +70,16 @@
       flex-direction: column;
       align-items: center;
     }
-    /* Update the nav-link-text alignment */
+    
     .nav-link-text {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    position: relative;
-    z-index: 2;
-    transition: all 0.3s ease;
-    padding-bottom: 1px; /* Added to compensate for icon adjustment */
-    }
-    /* .nav-link-text {
       display: flex;
       align-items: center;
       gap: 8px;
       position: relative;
       z-index: 2;
       transition: all 0.3s ease;
-    } */
+      padding-bottom: 1px;
+    }
     
     .nav-link-underline {
       height: 2px;
@@ -104,39 +100,21 @@
       width: 100%;
     }
     
-    /* Dropdown Icon
     .dropdown-icon {
-      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       color: #B4B4B9;
       margin-left: 8px;
       width: 25px;
       height: 25px;
       position: relative;
-      top: 2px;
-    } */
-    
-    /* Update the dropdown icon styles */
-    .dropdown-icon {
-    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    color: #B4B4B9;
-    margin-left: 8px;
-    width: 25px;
-    height: 25px;
-    position: relative;
-    top: 1px; /* Adjusted from 2px to 1px for better alignment */
+      top: 1px;
+      transition: color 0.3s ease;
     }
 
+    .nav-link:hover .dropdown-icon:hover {
+      color: #20C0F0;
+    }
 
-    .dropdown-icon.open {
-      transform: rotate(180deg);
-      color: #20C0F0;
-    }
-    
-    .nav-link:hover .dropdown-icon {
-      color: #20C0F0;
-    }
-    
-    /* Dropdown Container */
+    /* Dropdown styles */
     .dropdown-container {
       position: relative;
       cursor: pointer;
@@ -149,11 +127,10 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 15px;
+      height: 30px;
       background: transparent;
     }
     
-    /* Dropdown Menu */
     .dropdown-menu {
       position: absolute;
       top: calc(100% + 15px);
@@ -184,6 +161,7 @@
       display: flex;
       align-items: center;
       gap: 1rem;
+      
       background: rgba(255, 255, 255, 0.03);
     }
     
@@ -194,8 +172,15 @@
     }
     
     .dropdown-item .dropdown-icon {
+      color: #B4B4B9;
       font-size: 1.2rem;
       opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .dropdown-item:hover .dropdown-icon {
+      color: #20C0F0;
+      opacity: 1;
     }
     
     .dropdown-title {
@@ -209,35 +194,482 @@
       margin-top: 0.2rem;
     }
     
-    /* Content adjustment */
+    /* HERO SECTION */
     .homepage {
       margin-top: 100px;
-      padding: 2rem 3rem;
+      padding: 0 40px;
     }
     
+    .hero-container {
+      max-width: 1075px;
+      margin: 0 auto;
+    }
+    
+    .hero-section {
+      display: flex;
+      align-items: flex-start;
+      gap: 0;
+    }
+    
+    .hero-text {
+      flex: 1;
+    }
+    
+    .builder-statement {
+      font-size: 50px;
+      letter-spacing: 2.5px;
+      line-height: 1.2;
+      font-weight: 200;
+      color: #20C0F0;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .hero-image {
+      transform: translateX(-80px);
+      margin-right: -80px;
+    }
+    
+    .statement-image {
+      width: 300px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    /* SUBTITLE SECTION */
+    .subtitle-section {
+      width: calc(100% + 400px);
+      margin-top: 20px;
+    }
+
+    .subtitle-text {
+      font-size: 22px;
+      letter-spacing: 1.2px;
+      line-height: 1.4;
+      color: #B4B4B9;
+      margin: 0;
+      width: calc(100% - 400px);
+    }
+
+    /* BUTTONS SECTION */
+    .buttons-section {
+      width: calc(100% + 400px);
+      margin-top: 40px;
+      display: flex;
+      gap: 30px;
+    }
+
+    .action-button {
+      background-color: transparent;
+      color: #B4B4B9;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 18px 45px;
+      font-size: 20px;
+      font-weight: 500;
+      letter-spacing: 1.2px;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      display: inline-block;
+      z-index: 1;
+    }
+
+    .action-button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #20C0F0;
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(32, 192, 240, 0.3);
+    }
+
+    .action-button:active {
+      transform: translateY(-2px);
+    }
+
+    .action-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, 
+                  rgba(255,255,255,0.1) 0%,
+                  rgba(255,255,255,0.2) 50%,
+                  rgba(255,255,255,0.1) 100%);
+      z-index: -1;
+      transform: translateX(-100%);
+      transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .action-button:hover::before {
+      transform: translateX(100%);
+    }
+
+    /* CASE STUDIES SECTION - Updated with standardized image containers */
+    .case-studies-section {
+      max-width: 1400px;
+      margin: 100px auto;
+      padding: 0 40px;
+    }
+
+    .section-title {
+      color: #20C0F0;
+      font-size: 36px;
+      margin-bottom: 50px;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+    .case-studies-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .case-study-box {
+      background-color: #0A0A15;
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-study-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(32, 192, 240, 0.2);
+      border-color: rgba(32, 192, 240, 0.3);
+    }
+
+    /* Standardized image container */
+    .case-study-image-container {
+      width: 100%;
+      height: 200px;
+      background-color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px;
+    }
+
+    /* Standardized image styling */
+    .case-study-image {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .case-study-content {
+      flex: 1;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .case-study-title {
+      color: #20C0F0;
+      font-size: 22px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .case-study-description {
+      color: #B4B4B9;
+      font-size: 16px;
+      line-height: 1.6;
+      margin-bottom: 0;
+    }
+
+    /* Pure CSS contact popup */
+    #contact-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #contact-popup:target {
+      display: flex;
+    }
+
+    #contact-popup:target ~ .homepage {
+      filter: blur(2px);
+    }
+
+    .contact-content {
+      background-color: #00040F;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 40px;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+      position: relative;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .close-popup {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #B4B4B9;
+      font-size: 28px;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .close-popup:hover {
+      color: #20C0F0;
+      background-color: rgba(255, 255, 255, 0.05);
+      transform: rotate(90deg);
+    }
+
+    .contact-title {
+      color: #20C0F0;
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: 600;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      transition: background-color 0.3s;
+    }
+
+    .contact-item:hover {
+      background-color: rgba(255, 255, 255, 0.03);
+    }
+
+    .contact-icon {
+      color: #20C0F0;
+      font-size: 24px;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(32, 192, 240, 0.1);
+      border-radius: 50%;
+    }
+
+    .contact-text {
+      color: #B4B4B9;
+      font-size: 18px;
+    }
+
+    .contact-link {
+      color: #20C0F0;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+
+    .contact-link:hover {
+      color: #1aa0d0;
+      transform: translateX(5px);
+    }
+
     /* Responsive adjustments */
+    @media (max-width: 1200px) {
+      .case-studies-container {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .hero-section {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .builder-statement {
+        font-size: 48px;
+      }
+      
+      .statement-image {
+        width: 300px;
+        margin: 30px auto 0;
+        transform: none;
+      }
+      
+      .subtitle-section, .buttons-section {
+        width: 100%;
+      }
+      
+      .subtitle-text {
+        width: 100%;
+        font-size: 34px;
+      }
+
+      .hero-image {
+        transform: none;
+        margin-right: 0;
+      }
+
+      .buttons-section {
+        justify-content: center;
+      }
+    }
+
     @media (max-width: 768px) {
-      .navbar {
-        padding: 1.2rem;
+      .case-studies-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .builder-statement {
+        font-size: 36px;
       }
       
-      .nav-logo a {
-        font-size: 1.8rem;
+      .homepage {
+        padding: 0 20px;
       }
       
-      .nav-links {
-        gap: 1.5rem;
+      .subtitle-text {
+        font-size: 28px;
+      }
+
+      .buttons-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .action-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+      }
+
+      .section-title {
+        font-size: 30px;
+      }
+
+      .case-study-content {
+        padding: 25px;
+      }
+
+      .case-study-title {
+        font-size: 20px;
+      }
+
+      .case-study-description {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .builder-statement {
+        font-size: 28px;
       }
       
-      .dropdown-menu {
-        left: -100%;
-        transform: translateX(0);
-        min-width: 240px;
+      .statement-image {
+        width: 250px;
+      }
+      
+      .subtitle-text {
+        font-size: 22px;
+      }
+
+      .contact-content {
+        padding: 30px 20px;
+      }
+
+      .contact-title {
+        font-size: 24px;
+      }
+
+      .contact-text {
+        font-size: 16px;
+      }
+
+      .section-title {
+        font-size: 26px;
+      }
+
+      .case-study-content {
+        padding: 20px;
+      }
+
+      .case-study-title {
+        font-size: 18px;
       }
     }
   </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const dropdownContainer = document.querySelector('.dropdown-container');
+      let dropdownTimeout;
+
+      dropdownContainer.addEventListener('mouseenter', function() {
+        clearTimeout(dropdownTimeout);
+        const menu = this.querySelector('.dropdown-menu');
+        menu.style.display = 'flex';
+      });
+
+      dropdownContainer.addEventListener('mouseleave', function() {
+        const menu = this.querySelector('.dropdown-menu');
+        dropdownTimeout = setTimeout(() => {
+          menu.style.display = 'none';
+        }, 300);
+      });
+
+      const dropdownMenu = document.querySelector('.dropdown-menu');
+      if (dropdownMenu) {
+        dropdownMenu.addEventListener('mouseenter', function() {
+          clearTimeout(dropdownTimeout);
+        });
+
+        dropdownMenu.addEventListener('mouseleave', function() {
+          dropdownTimeout = setTimeout(() => {
+            this.style.display = 'none';
+          }, 300);
+        });
+      }
+    });
+  </script>
 </head>
 <body>
+  <!-- Navigation Bar -->
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo">
@@ -268,24 +700,31 @@
             <a href="/accessibility-redesign" class="dropdown-item">
               <span class="dropdown-icon">⎋</span>
               <div>
-                <div class="dropdown-title">Accessibility Redesign</div>
-                <div class="dropdown-subtitle">Project 1</div>
+                <div class="dropdown-title">Search Bars</div>
+                <div class="dropdown-subtitle">Spotify, Youtube, Photos App</div>
               </div>
             </a>
             <a href="/personas-storyboarding" class="dropdown-item">
               <span class="dropdown-icon">⎋</span>
               <div>
-                <div class="dropdown-title">Personas & Storyboarding</div>
-                <div class="dropdown-subtitle">Project 2</div>
+                <div class="dropdown-title">Vending Machine User</div>
+                <div class="dropdown-subtitle">User Experience Research</div>
               </div>
             </a>
             <a href="/websiteredesign" class="dropdown-item">
               <span class="dropdown-icon">⎋</span>
               <div>
                 <div class="dropdown-title">Website Redesign</div>
-                <div class="dropdown-subtitle">Project 3</div>
+                <div class="dropdown-subtitle">Pacific Northwest X-Ray Inc.</div>
               </div>
             </a>
+            <a href="/cohive.js" class="dropdown-item">
+                <span class="dropdown-icon">⎋</span>
+                <div>
+                  <div class="dropdown-title">CoHive</div>
+                  <div class="dropdown-subtitle">Outreach Strategy + Software Framework</div>
+                </div>
+              </a>
           </div>
         </div>
         
@@ -294,11 +733,6 @@
           <span class="nav-link-underline"></span>
         </a>
         
-        <a href="/fun" class="nav-link">
-          <span class="nav-link-text">Fun</span>
-          <span class="nav-link-underline"></span>
-        </a>
-
         <a href="/resume" class="nav-link">
           <span class="nav-link-text">Resume</span>
           <span class="nav-link-underline"></span>
@@ -307,43 +741,105 @@
     </div>
   </nav>
 
+  <!-- Homepage Content -->
   <div class="homepage">
-    <h1>Welcome</h1>
-    <!-- Content goes here -->
+    <div class="hero-container">
+      <div class="hero-section">
+        <div class="hero-text">
+          <h1 class="builder-statement">I'm a builder at the <br>
+          intersection of thoughtful <br>
+          design and human<br>
+          systems.</h1>
+        </div>
+        <div class="hero-image">
+          <img src="sm.png" alt="Illustration of design systems" class="statement-image">
+        </div>
+      </div>
+
+      <div class="subtitle-section">
+        <p class="subtitle-text">
+          Crafting intentional products through deep observation – examining
+          how things work, who they truly serve, and the invisible
+          relationships they create.
+        </p>
+      </div>
+
+      <div class="buttons-section">
+        <a href="/about" class="action-button">More About Me</a>
+        <a href="#contact-popup" class="action-button">Get in Touch</a>
+      </div>
+    </div>
   </div>
 
-  <script>
-    // Simple JavaScript to handle dropdown functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const dropdownContainer = document.querySelector('.dropdown-container');
-      const dropdownMenu = document.querySelector('.dropdown-menu');
-      const dropdownIcon = document.querySelector('.dropdown-icon');
-      let dropdownTimeout;
+  <!-- Case Studies Section with standardized image containers -->
+  <section class="case-studies-section">
+    <h2 class="section-title">Case Studies</h2>
+    <div class="case-studies-container">
+      <a href="/accessibility-redesign" class="case-study-box">
+        <div class="case-study-image-container">
+          <img src="/spotify1.png" alt="Spotify Logo" class="case-study-image">
+        </div>
+        <div class="case-study-content">
+          <h3 class="case-study-title">Deep Dive Into Spotify's Search Bar</h3>
+          <p class="case-study-description">I analyzed search bars across YouTube, the Photos app, and Spotify to evaluate their accessibility strengths and weaknesses to redesign Spotify's search bar.</p>
+        </div>
+      </a>
       
-      dropdownContainer.addEventListener('mouseenter', function() {
-        clearTimeout(dropdownTimeout);
-        dropdownMenu.style.display = 'flex';
-        dropdownIcon.classList.add('open');
-      });
+      <a href="/personas-storyboarding" class="case-study-box">
+        <div class="case-study-image-container">
+          <img src="/vending.png" alt="Vending Machine" class="case-study-image">
+        </div>
+        <div class="case-study-content">
+          <h3 class="case-study-title">Vending Machine User Experience</h3>
+          <p class="case-study-description"> I conducted user experience research on vending machine users to understand both their usage patterns and the types of audiences who interact with them.</p>
+        </div>
+      </a>
       
-      dropdownContainer.addEventListener('mouseleave', function() {
-        dropdownTimeout = setTimeout(() => {
-          dropdownMenu.style.display = 'none';
-          dropdownIcon.classList.remove('open');
-        }, 300);
-      });
-      
-      dropdownMenu.addEventListener('mouseenter', function() {
-        clearTimeout(dropdownTimeout);
-      });
-      
-      dropdownMenu.addEventListener('mouseleave', function() {
-        dropdownTimeout = setTimeout(() => {
-          dropdownMenu.style.display = 'none';
-          dropdownIcon.classList.remove('open');
-        }, 300);
-      });
-    });
-  </script>
+      <a href="/websiteredesign" class="case-study-box">
+        <div class="case-study-image-container">
+          <img src="/web1.png" alt="Website Icon logo" class="case-study-image">
+        </div>
+        <div class="case-study-content">
+          <h3 class="case-study-title">Pacific Northwest X-Ray Inc. Website Redesign</h3>
+          <p class="case-study-description">I redesigned this website to improve responsiveness across screen sizes, enhance visual hierarchy, and address accessibility.</p>
+        </div>
+      </a>
+
+      <a href="/cohive.js" class="case-study-box">
+        <div class="case-study-image-container">
+          <img src="/bix.png" alt="Cohive logo" class="case-study-image">
+        </div>
+        <div class="case-study-content">
+          <h3 class="case-study-title">CoHive</h3>
+          <p class="case-study-description">I led this project as the project lead for Brown Technology Consulting Group, where I had the opportunity to support a real startup while collaborating closely on product design and implementation.</p>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Pure CSS Contact Popup -->
+  <div id="contact-popup">
+    <div class="contact-content">
+      <a href="#" class="close-popup">&times;</a>
+      <h2 class="contact-title">Let's Connect</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+          <div class="contact-text">
+            <a href="https://www.linkedin.com/in/ryan-kim-402080250/" class="contact-link" target="_blank">linkedin.com/in/ryan-kim-402080250/</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div class="contact-text">ryan_m_kim@brown.edu</div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div class="contact-text">(714) 616-1783</div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
